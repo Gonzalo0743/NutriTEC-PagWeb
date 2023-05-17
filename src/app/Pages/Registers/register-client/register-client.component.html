@@ -51,16 +51,7 @@
                   </div>
                 </div>
               </div>
-
-              <!--ID number-->
-              <div class="form-outline">
-                <input type="text" formControlName="iD_Client" id="form3Example1" class="form-control" />
-                <label class="form-label" for="form3Example1">Identification Number</label>
-              </div>
                 
-
-                
-             
 
               <!--Birthdate and BMI -->
               <div class="row">
@@ -79,7 +70,7 @@
                 </div>
               </div>
 
-              <!-- Weight and Adress -->
+              <!-- Weight and Country -->
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
@@ -90,12 +81,12 @@
 
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="address" id="form3Example2" class="form-control" />
-                    <label class="form-label" for="form3Example2">Address</label>
+                    <input type="text" formControlName="country" id="form3Example2" class="form-control" />
+                    <label class="form-label" for="form3Example2">Country</label>
                   </div>
                 </div>
               </div>
-  
+
               <!-- Email input -->
               <div class="form-outline mb-4">
                 <input type="email" formControlName="email" id="form3Example3" class="form-control" />
@@ -109,6 +100,61 @@
               </div>
 
               
+              <h3 class="mb-1">Measures</h3>
+              <!-- Waist and Neck -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="number" formControlName="waist" id="form3Example1" class="form-control" />
+                    <label class="form-label" for="form3Example1">Waist</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" formControlName="neck" id="form3Example2" class="form-control" />
+                    <label class="form-label" for="form3Example2">Neck</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hips and Muscle -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="number" formControlName="hips" id="form3Example1" class="form-control" />
+                    <label class="form-label" for="form3Example1">Hips</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" formControlName="muscle" id="form3Example2" class="form-control" />
+                    <label class="form-label" for="form3Example2">Muscle (%)</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fat and Muscle -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="number" formControlName="Fat" id="form3Example1" class="form-control" />
+                    <label class="form-label" for="form3Example1">Fat (%)</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" formControlName="calories" id="form3Example2" class="form-control" />
+                    <label class="form-label" for="form3Example2">Daily calorie intake</label>
+                  </div>
+                </div>
+              </div>
+  
+              
+
+              
 
               
               <!-- Submit button -->
@@ -118,7 +164,7 @@
 
               <!-- Back button -->
               <div class="d-flex align-items-center justify-content-center pb-4">
-                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" routerLink="/">Back</button>
+                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" routerLink="/ClientLogin">Back</button>
               </div>
             </form>
           </div>
