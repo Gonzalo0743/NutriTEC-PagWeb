@@ -30,8 +30,7 @@
             ],
             "scripts": ["node_modules/jquery/dist/jquery.min.js",
             "node_modules/bootstrap/dist/js/bootstrap.min.js",
-            "node_modules/jquery/dist/jquery.min.js",
-            "node_modules/@popperjs/core/dist/esm/popper.min.js"]
+            "node_modules/jquery/dist/jquery.min.js"]
           },
           "configurations": {
             "production": {
@@ -98,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
