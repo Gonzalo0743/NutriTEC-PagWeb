@@ -22,10 +22,8 @@ import { RegisterLandPageComponent } from './Pages/Client/RegisterData/register-
 import { MeasuresRegisterComponent } from './Pages/Client/RegisterData/measures-register/measures-register.component';
 import { DailyConsumptionRegisterComponent } from './Pages/Client/RegisterData/daily-consumption-register/daily-consumption-register.component';
 import { MealManagementLandPageComponent } from './Pages/Client/MealManagement/meal-management-land-page/meal-management-land-page.component';
-import { ProductsComponent } from './Pages/Client/MealManagement/products/products.component';
 import { AddProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/add-prod-dish/add-prod-dish.component';
 import { EditProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/edit-prod-dish/edit-prod-dish.component';
-import { ConsProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/cons-prod-dish/cons-prod-dish.component';
 import { DeleteProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/delete-prod-dish/delete-prod-dish.component';
 import { ConsultProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/consult-prod-dish/consult-prod-dish.component';
 import { AddRecipeComponent } from './Pages/Client/MealManagement/Recipes/add-recipe/add-recipe.component';
@@ -68,10 +66,8 @@ import { PatientTrackingComponent } from './Pages/Nutri/patient-tracking/patient
     MeasuresRegisterComponent,
     DailyConsumptionRegisterComponent,
     MealManagementLandPageComponent,
-    ProductsComponent,
     AddProdDishComponent,
     EditProdDishComponent,
-    ConsProdDishComponent,
     DeleteProdDishComponent,
     ConsultProdDishComponent,
     AddRecipeComponent,
