@@ -7,6 +7,9 @@ import { LoginClientComponent } from './Pages/Logins/login-client/login-client.c
 import { LoginNutriComponent } from './Pages/Logins/login-nutri/login-nutri.component';
 import { RegisterClientComponent } from './Pages/Registers/register-client/register-client.component';
 import { RegisterNutriComponent } from './Pages/Registers/register-nutri/register-nutri.component';
+import { ClientLandPageComponent } from './Pages/Client/client-land-page/client-land-page.component';
+import { AdminLandPageComponent } from './Pages/Admin/admin-land-page/admin-land-page.component';
+import { NutriLandPageComponent } from './Pages/Nutri/nutri-land-page/nutri-land-page.component';
 
 const routes: Routes = [
   {
@@ -32,6 +35,18 @@ const routes: Routes = [
   {
     path:'NutriRegister',
     component: RegisterNutriComponent
+  },
+  {
+    path:'ClientLandPage',
+    component: ClientLandPageComponent
+  },
+  {
+    path:'AdminLandPage',
+    component: AdminLandPageComponent
+  },
+  {
+    path:'NutriLandPage',
+    component: NutriLandPageComponent
   }
 ];
 
