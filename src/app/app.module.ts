@@ -44,6 +44,9 @@ import { DeletePlanComponent } from './Pages/Nutri/MealManagementNutri/PlansMana
 import { SearchAsocPacComponent } from './Pages/Nutri/search-asoc-pac/search-asoc-pac.component';
 import { PlanAssignmentComponent } from './Pages/Nutri/plan-assignment/plan-assignment.component';
 import { PatientTrackingComponent } from './Pages/Nutri/patient-tracking/patient-tracking.component';
+import { ProdDishLandPageComponent } from './Pages/Client/MealManagement/ProductsDishes/prod-dish-land-page/prod-dish-land-page.component';
+import { RecipesLandPageComponent } from './Pages/Client/MealManagement/Recipes/recipes-land-page/recipes-land-page.component';
+import { PlansLandPageComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/plans-land-page/plans-land-page.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +90,10 @@ import { PatientTrackingComponent } from './Pages/Nutri/patient-tracking/patient
     DeletePlanComponent,
     SearchAsocPacComponent,
     PlanAssignmentComponent,
-    PatientTrackingComponent
+    PatientTrackingComponent,
+    ProdDishLandPageComponent,
+    RecipesLandPageComponent,
+    PlansLandPageComponent
   ],
   imports: [
     BrowserModule,
