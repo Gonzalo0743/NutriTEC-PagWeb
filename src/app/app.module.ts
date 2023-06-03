@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule} from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,6 +49,10 @@ import { PatientTrackingComponent } from './Pages/Nutri/patient-tracking/patient
 import { ProdDishLandPageComponent } from './Pages/Client/MealManagement/ProductsDishes/prod-dish-land-page/prod-dish-land-page.component';
 import { RecipesLandPageComponent } from './Pages/Client/MealManagement/Recipes/recipes-land-page/recipes-land-page.component';
 import { PlansLandPageComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/plans-land-page/plans-land-page.component';
+import { ShowAllProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/show-all-prod-dish/show-all-prod-dish.component';
+import { ShowAllRecipeComponent } from './Pages/Client/MealManagement/Recipes/show-all-recipe/show-all-recipe.component';
+import { ShowAllPdNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/show-all-pd-nutri/show-all-pd-nutri.component';
+import { ShowAllPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/show-all-plan/show-all-plan.component';
 
 @NgModule({
   declarations: [
@@ -93,11 +99,18 @@ import { PlansLandPageComponent } from './Pages/Nutri/MealManagementNutri/PlansM
     PatientTrackingComponent,
     ProdDishLandPageComponent,
     RecipesLandPageComponent,
-    PlansLandPageComponent
+    PlansLandPageComponent,
+    ShowAllProdDishComponent,
+    ShowAllRecipeComponent,
+    ShowAllPdNutriComponent,
+    ShowAllPlanComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

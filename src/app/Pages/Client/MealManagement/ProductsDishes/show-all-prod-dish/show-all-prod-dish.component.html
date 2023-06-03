@@ -1,0 +1,25 @@
+<app-header-client></app-header-client>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Products & Dishes Management</h1>
+  </div>
+  <!-- Title -->
+
+  <form (ngSubmit)="proceedShowAllProdDish()">
+
+    {{response}}
+
+
+    <!-- Submit button -->
+    <div class="d-flex align-items-center justify-content-center pb-4">
+        <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">Show All</button>
+    </div>
+
+     <!-- Back button -->
+     <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/ProdDishesLandPage">Back</button>
+    </div>
+  </form>

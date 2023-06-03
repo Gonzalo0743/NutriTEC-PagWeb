@@ -40,6 +40,10 @@ import { AddPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagem
 import { EditPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/edit-plan/edit-plan.component';
 import { ConsultPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/consult-plan/consult-plan.component';
 import { DeletePlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/delete-plan/delete-plan.component';
+import { ShowAllProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/show-all-prod-dish/show-all-prod-dish.component';
+import { ShowAllRecipeComponent } from './Pages/Client/MealManagement/Recipes/show-all-recipe/show-all-recipe.component';
+import { ShowAllPdNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/show-all-pd-nutri/show-all-pd-nutri.component';
+import { ShowAllPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/show-all-plan/show-all-plan.component';
 
 const routes: Routes = [
   {
@@ -135,6 +139,10 @@ const routes: Routes = [
     component:SearchAsocPacComponent
   },
   {
+    path:'ShowAllProdDish',
+    component:ShowAllProdDishComponent
+  },
+  {
     path:'AddProdDish',
     component:AddProdDishComponent
   },
@@ -149,6 +157,10 @@ const routes: Routes = [
   {
     path:'EditProdDish',
     component:EditProdDishComponent
+  },
+  {
+    path:'ShowAllRecipe',
+    component:ShowAllRecipeComponent
   },
   {
     path:'AddRecipe',
@@ -167,6 +179,10 @@ const routes: Routes = [
     component:EditRecipeComponent
   },
   {
+    path:'ShowAllPDNutri',
+    component:ShowAllPdNutriComponent
+  },
+  {
     path:'AddPDNutri',
     component:AddPDNutriComponent
   },
@@ -181,6 +197,10 @@ const routes: Routes = [
   {
     path:'DeletePDNutri',
     component:DeletePDNutriComponent
+  },
+  {
+    path:'ShowAllPlan',
+    component:ShowAllPlanComponent
   },
   {
     path:'AddPlan',

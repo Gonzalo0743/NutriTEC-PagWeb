@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,21 @@ export class AllFunctionsService {
 
   rootUrl = "https://localhost:7194/api/"
 
+  URLPrueba = "https://nutritec-api-pg.azurewebsites.net/WeatherForecast"
+
   constructor(private http:HttpClient) { }
+
+  //*Gets* for show all the names
+
+
+  /**
+   * @description This method is used to get all the branches of the system
+   * @returns A list with all the branches
+   */
+  public getAllProdDish(){
+
+    return this.http.get(this.URLPrueba);
+  }
 
 
   //*Post* for add info
