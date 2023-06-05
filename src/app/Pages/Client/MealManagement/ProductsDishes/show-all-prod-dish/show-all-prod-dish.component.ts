@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AllFunctionsService } from 'src/app/Functions/all-functions.service';
 import { Router } from '@angular/router';
+import { Temperature } from 'src/app/Models/Prueba.interface';
 
 @Component({
   selector: 'app-show-all-prod-dish',
@@ -9,35 +10,30 @@ import { Router } from '@angular/router';
   styleUrls: ['./show-all-prod-dish.component.css']
 })
 export class ShowAllProdDishComponent {
+  Prueba: Temperature[] = [];
 
-  constructor(private builder: FormBuilder, private service: AllFunctionsService){}
+  constructor(private builder: FormBuilder, private service: AllFunctionsService, private router:Router){}
 
-    jsonResponse: any;
-    response:any;
-
-            /**
+     /**
    * @description This function calls the function of the api to obtain all the branches
    * @returns A list with all the branches
    */
-    proceedShowAllProdDish(){
+  ngOnInit(): void{
 
-      this.service.getAllProdDish().subscribe(item =>{
+    this.service.getAllProdDish().subscribe(item =>{
 
-        this.jsonResponse = item;
+      this.Prueba = item;
 
-        console.log(this.jsonResponse);
-        this.response = JSON.stringify(this.jsonResponse);
+      console.log(this.Prueba);
+    
+    })
 
+  }
 
-        /** 
-        if (this.jsonResponse.status == "ok"){
-          console.log(this.jsonResponse);
-          this.response = JSON.stringify(this.jsonResponse);
-        }
-        else{
-          console.log("Error");
-        }*/
-      })
-      
-    }
+  consultTemperature(temperatureC: any){
+    console.log(temperatureC);
+  }
+
+   
+    
 }

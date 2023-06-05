@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Temperature } from '../../app/Models/Prueba.interface';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,9 +21,11 @@ export class AllFunctionsService {
    * @description This method is used to get all the branches of the system
    * @returns A list with all the branches
    */
-  public getAllProdDish(){
+  public getAllProdDish():Observable<Temperature[]>{
 
-    return this.http.get(this.URLPrueba);
+    return this.http.get<Temperature[]>(this.URLPrueba)
+
+    //return this.http.get(this.URLPrueba);
   }
 
 

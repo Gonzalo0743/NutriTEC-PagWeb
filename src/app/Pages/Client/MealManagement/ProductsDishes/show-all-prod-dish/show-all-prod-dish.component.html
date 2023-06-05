@@ -8,18 +8,27 @@
   </div>
   <!-- Title -->
 
-  <form (ngSubmit)="proceedShowAllProdDish()">
+  <table class="table table-hover table-light">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Temperature C</th>
+        <th scope="col">Temperature F</th>
+        <th scope="col">Summary</th>
+      </tr>
+    </thead>
+    <tbody>
 
-    {{response}}
-
-
-    <!-- Submit button -->
-    <div class="d-flex align-items-center justify-content-center pb-4">
-        <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">Show All</button>
-    </div>
+      <tr *ngFor="let temperature of Prueba" (click)="consultTemperature(temperature.temperatureC)">
+        <th scope="row">{{temperature.date}}</th>
+        <td>{{temperature.temperatureC}}</td>
+        <td>{{temperature.temperatureF}}</td>
+        <td>{{temperature.summary}}</td>
+      </tr>
+    </tbody>
+  </table>
 
      <!-- Back button -->
      <div class="d-flex align-items-center justify-content-center pb-4">
         <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/ProdDishesLandPage">Back</button>
     </div>
-  </form>
