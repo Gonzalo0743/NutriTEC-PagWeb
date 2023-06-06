@@ -2,17 +2,21 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Temperature } from '../../app/Models/Prueba.interface';
 import { Observable } from 'rxjs';
+import { ClientData } from '../Models/ClientInfo.interface';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AllFunctionsService {
 
-  rootUrl = "https://localhost:7194/api/"
+  rootUrl = "https://nutritec-api-pg.azurewebsites.net/api/"
 
-  URLPrueba = "https://nutritec-api-pg.azurewebsites.net/WeatherForecast"
 
+  
   constructor(private http:HttpClient) { }
+
+  public DataClient: ClientData[]=[];
 
   //*Gets* for show all the names
 
@@ -23,10 +27,9 @@ export class AllFunctionsService {
    */
   public getAllProdDish():Observable<Temperature[]>{
 
-    return this.http.get<Temperature[]>(this.URLPrueba)
-
-    //return this.http.get(this.URLPrueba);
+    return this.http.get<Temperature[]>(this.rootUrl + 'WeatherForecast')
   }
+  
 
 
   //*Post* for add info
@@ -99,6 +102,38 @@ export class AllFunctionsService {
 
     return this.http.post(this.rootUrl + 'CAMBIAR',data);
   }
+
+    /**
+   * @description This method is used to get the admins to verify the login
+   * @param data 
+   * @returns Response from the JSON if is correct or not
+   */
+    public getAdmins(data:any){
+
+      return this.http.post(this.rootUrl + 'auth_admin',data);
+    }
+
+      /**
+   * @description This method is used to get the clients to verify the login
+   * @param data 
+   * @returns Response from the JSON if is correct or not
+   */
+
+  public getClients(data:any){
+
+    return this.http.post(this.rootUrl + 'auth_client',data);
+  }
+
+        /**
+   * @description This method is used to get the clients to verify the login
+   * @param data 
+   * @returns Response from the JSON if is correct or not
+   */
+
+    public getNutris(data:any){
+
+      return this.http.post(this.rootUrl + 'auth_nutritionist',data);
+    }
 
     //*Put* for edit info
 

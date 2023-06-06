@@ -53,6 +53,7 @@ import { ShowAllProdDishComponent } from './Pages/Client/MealManagement/Products
 import { ShowAllRecipeComponent } from './Pages/Client/MealManagement/Recipes/show-all-recipe/show-all-recipe.component';
 import { ShowAllPdNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/show-all-pd-nutri/show-all-pd-nutri.component';
 import { ShowAllPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/show-all-plan/show-all-plan.component';
+import { ClientInfoComponent } from './Pages/Client/client-info/client-info.component';
 
 @NgModule({
   declarations: [
@@ -103,7 +104,8 @@ import { ShowAllPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansMan
     ShowAllProdDishComponent,
     ShowAllRecipeComponent,
     ShowAllPdNutriComponent,
-    ShowAllPlanComponent
+    ShowAllPlanComponent,
+    ClientInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,30 +1,27 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { FormBuilder, Validators } from '@angular/forms';
 import { AllFunctionsService } from 'src/app/Functions/all-functions.service';
 import { Router } from '@angular/router';
-import { HttpErrorResponse } from '@angular/common/http';
-
-
-
-
+import { ClientData } from 'src/app/Models/ClientInfo.interface';
 
 @Component({
-  selector: 'app-client-land-page',
-  templateUrl: './client-land-page.component.html',
-  styleUrls: ['./client-land-page.component.css']
+  selector: 'app-client-info',
+  templateUrl: './client-info.component.html',
+  styleUrls: ['./client-info.component.css']
 })
-export class ClientLandPageComponent {
-
+export class ClientInfoComponent {
   constructor(private builder: FormBuilder, private service: AllFunctionsService, private router:Router){}
-
+  DataClient: ClientData[]=[];
      /**
    * @description This function calls the function of the api to obtain all the branches
    * @returns A list with all the branches
    */
   ngOnInit(): void{
-
+    this.DataClient = this.service.DataClient;
+    console.log(this.DataClient);
   }
 
+  
 
 }

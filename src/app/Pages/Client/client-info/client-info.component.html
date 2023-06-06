@@ -1,0 +1,51 @@
+<app-header-client></app-header-client>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Client Info</h1>
+  </div>
+  <!-- Title -->
+
+  <table class="table table-light">
+    <thead>
+      <tr>
+        <th scope="col">Client ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Last Name (1)</th>
+        <th scope="col">Last Name (2)</th>
+        <th scope="col">Email</th>
+        <th scope="col">BMI</th>
+        <th scope="col">Weight</th>
+        <th scope="col">Fat Percentage</th>
+        <th scope="col">Hip Size</th>
+        <th scope="col">Muscle Percentage</th>
+        <th scope="col">Neck Size</th>
+        <th scope="col">Waist Size</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let data of DataClient" >
+        <th scope="row">{{data.client_id}}</th>
+        <td>{{data.name}}</td>
+        <td>{{data.lname1}}</td>
+        <td>{{data.lname2}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.bmi}}</td>
+        <td>{{data.weight}}</td>
+        <td>{{data.fat_percentage}}</td>
+        <td>{{data.hip_size}}</td>
+        <td>{{data.muscle_percentage}}</td>
+        <td>{{data.neck_size}}</td>
+        <td>{{data.waist_size}}</td>
+        
+      </tr>
+    </tbody>
+  </table>
+
+     <!-- Back button -->
+     <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/ClientLandPage">Back</button>
+    </div>

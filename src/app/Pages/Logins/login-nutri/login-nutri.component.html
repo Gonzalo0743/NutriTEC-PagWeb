@@ -14,24 +14,24 @@
                   </div>
   
                   <!--<form [formGroup]="loginClientForm" (ngSubmit)="proceedClientLogin()">-->
-                  <form>
+                  <form [formGroup]="loginNutriForm" (ngSubmit)="proceedNutriLogin()">
                     <p>Please login to your account</p>
   
                     <div class="form-outline mb-4">
-                      <input type="email" id="form2Example11" formControlName="ID_Credentials" class="form-control"
+                      <input type="email" id="form2Example11" formControlName="email" class="form-control"
                         placeholder="Email" />
                       <label class="form-label" for="form2Example11">Email</label>
                     </div>
   
                     <div class="form-outline mb-4">
-                      <input type="password" id="form2Example22" formControlName="Password" class="form-control" 
+                      <input type="password" id="form2Example22" formControlName="password" class="form-control" 
                       placeholder="Password"/>
                       <label class="form-label" for="form2Example22">Password</label>
                     </div>
   
                     <div class="text-center pt-1 mb-5 pb-1">
                       <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log in</button>
-                      <!--<div *ngIf="loginClientForm.errors?.['unauthenticated']">ID or Password incorrect!</div>-->
+                      <div *ngIf="loginNutriForm.errors?.['unauthenticated']">ID or Password incorrect!</div>
                     </div>
                     
   
