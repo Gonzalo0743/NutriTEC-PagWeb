@@ -45,6 +45,8 @@ import { ShowAllRecipeComponent } from './Pages/Client/MealManagement/Recipes/sh
 import { ShowAllPdNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/show-all-pd-nutri/show-all-pd-nutri.component';
 import { ShowAllPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/show-all-plan/show-all-plan.component';
 import { ClientInfoComponent } from './Pages/Client/client-info/client-info.component';
+import { AdminInfoComponent } from './Pages/Admin/admin-info/admin-info.component';
+import { NutriInfoComponent } from './Pages/Nutri/nutri-info/nutri-info.component';
 
 const routes: Routes = [
   {
@@ -222,6 +224,14 @@ const routes: Routes = [
   {
     path:'ClientInfo',
     component:ClientInfoComponent
+  },
+  {
+    path:'AdminInfo',
+    component:AdminInfoComponent
+  },
+  {
+    path:'NutriInfo',
+    component:NutriInfoComponent
   }
 
 ];

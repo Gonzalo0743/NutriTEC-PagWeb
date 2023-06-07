@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AllFunctionsService } from 'src/app/Functions/all-functions.service';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
+
+import { NutriData } from 'src/app/Models/NutriInfo.interface';
 
 @Component({
   selector: 'app-login-nutri',
@@ -14,6 +17,7 @@ export class LoginNutriComponent {
     private router: Router){}
     
     json:any;
+    NutriDataLog:NutriData[]=[];
 
     loginNutriForm = this.builder.group({
       email: this.builder.control('', Validators.required),
@@ -30,16 +34,24 @@ export class LoginNutriComponent {
 
         this.service.getNutris(formObj).subscribe(item =>{
           this.json = item;
-          console.log(this.json);
 
           //Revisar si ese "Ok" se escribe exactamente igual
           if(this.json.status == "ok"){
             this.router.navigate(['/NutriLandPage']);
             console.log("Login Succesfull");
+            console.log(this.json);
+
+            this.NutriDataLog = this.json.result;
+            console.log(this.NutriDataLog);
+
+            this.service.DataNutri = this.NutriDataLog;
 
           }
-          else{
-            console.log("Hola")
+
+        },
+        (error: HttpErrorResponse) => {
+          if (error.status === 400) {
+            console.log(error.error); // Muestra el error en la consola
             this.loginNutriForm.setErrors({unauthenticated: true});
           }
         })

@@ -1,0 +1,29 @@
+<app-header-admin></app-header-admin>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Admin Info</h1>
+  </div>
+  <!-- Title -->
+
+  <table class="table table-light">
+    <thead>
+      <tr>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let data of dataProof" >
+        <th scope="row">{{data.email}}</th>
+        
+      </tr>
+    </tbody>
+  </table>
+
+     <!-- Back button -->
+     <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/AdminLandPage">Back</button>
+    </div>

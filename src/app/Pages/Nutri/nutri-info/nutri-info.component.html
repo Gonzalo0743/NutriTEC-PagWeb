@@ -1,0 +1,44 @@
+<app-header-nutritionist></app-header-nutritionist>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Nutri Info</h1>
+  </div>
+  <!-- Title -->
+
+  <table class="table table-light">
+    <thead>
+      <tr>
+        <th scope="col">Employee ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Second Name</th>
+        <th scope="col">Last Name (1)</th>
+        <th scope="col">Last Name (2)</th>
+        <th scope="col">Email</th>
+        <th scope="col">Card Number</th>
+        <th scope="col">Profile Pic</th>
+        <th scope="col">Nutritionist Code</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let data of dataProof" >
+        <th scope="row">{{data.employee_id}}</th>
+        <td>{{data.name}}</td>
+        <td>{{data.second_name}}</td>
+        <td>{{data.lname1}}</td>
+        <td>{{data.lname2}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.credit_card}}</td>
+        <td>{{data.profile_pic}}</td>
+        <td>{{data.nutritionist_code}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+     <!-- Back button -->
+     <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/NutriLandPage">Back</button>
+    </div>

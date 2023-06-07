@@ -43,7 +43,7 @@ export class LoginClientComponent {
             console.log("Login Succesfull");
             console.log(this.json);
             
-            this.ClientDataLog = this.json.result
+            this.ClientDataLog = this.json.result;
             console.log(this.ClientDataLog); 
             
             this.service.DataClient = this.ClientDataLog;
@@ -62,8 +62,5 @@ export class LoginClientComponent {
     }
     
 
-
-
-    
 
 }

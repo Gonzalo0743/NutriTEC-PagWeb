@@ -3,21 +3,16 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { AllFunctionsService } from 'src/app/Functions/all-functions.service';
 import { Router } from '@angular/router';
 
-import { ClientData } from 'src/app/Models/ClientInfo.interface';
-
-
-
+import { AdminData } from 'src/app/Models/AdminInfo.interface';
 @Component({
-  selector: 'app-client-info',
-  templateUrl: './client-info.component.html',
-  styleUrls: ['./client-info.component.css']
+  selector: 'app-admin-info',
+  templateUrl: './admin-info.component.html',
+  styleUrls: ['./admin-info.component.css']
 })
+export class AdminInfoComponent {
 
-
-
-export class ClientInfoComponent {
   constructor(private builder: FormBuilder, private service: AllFunctionsService, private router:Router){}
-  DataClient: ClientData[]=[];
+  DataAdmin: AdminData[]=[];
 
   dataProof: any=[];
 
@@ -26,13 +21,11 @@ export class ClientInfoComponent {
    * @returns A list with all the branches
    */
   ngOnInit(): void{
-    this.DataClient = this.service.DataClient;
-    console.log(this.DataClient);
+    this.DataAdmin = this.service.DataClient;
+    console.log(this.DataAdmin);
 
-    this.dataProof = Array.of(this.DataClient);
-    
+    this.dataProof = Array.of(this.DataAdmin);
+
   }
-
-  
 
 }

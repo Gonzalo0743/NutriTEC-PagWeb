@@ -2,7 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Temperature } from '../../app/Models/Prueba.interface';
 import { Observable } from 'rxjs';
+
 import { ClientData } from '../Models/ClientInfo.interface';
+import { AdminData } from '../Models/AdminInfo.interface';
+import { NutriData } from '../Models/NutriInfo.interface';
 
 
 @Injectable({
@@ -16,7 +19,13 @@ export class AllFunctionsService {
   
   constructor(private http:HttpClient) { }
 
+
+  //To show the user data
   public DataClient: ClientData[]=[];
+  public DataNutri: NutriData[]=[];
+  public DataAdmin: AdminData[]=[];
+
+  
 
   //*Gets* for show all the names
 
