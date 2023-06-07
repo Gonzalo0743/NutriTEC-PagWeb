@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { ClientData } from '../Models/ClientInfo.interface';
 import { AdminData } from '../Models/AdminInfo.interface';
 import { NutriData } from '../Models/NutriInfo.interface';
+import { AllProductsDishesData } from '../Models/AllProductsDishes.interface';
 
 
 @Injectable({
@@ -37,6 +38,11 @@ export class AllFunctionsService {
   public getAllProdDish():Observable<Temperature[]>{
 
     return this.http.get<Temperature[]>(this.rootUrl + 'WeatherForecast')
+  }
+
+  public getAllProdDishState():Observable<AllProductsDishesData[]>{
+
+    return this.http.get<AllProductsDishesData[]>(this.rootUrl + 'get_all_products_dishes')
   }
   
 
@@ -83,6 +89,10 @@ export class AllFunctionsService {
 
     return this.http.post(this.rootUrl + 'CAMBIAR',data);
 
+  }
+
+  public addAdmin(data:any){
+    return this.http.post(this.rootUrl + 'add_admin', data);
   }
 
   //*Gets* for show specific info
@@ -169,6 +179,11 @@ export class AllFunctionsService {
     public putEditPDNutri(data:any){
 
       return this.http.put(this.rootUrl + 'CAMBIAR', data);
+    }
+
+    public putChangeDishState(data:any){
+
+      return this.http.put(this.rootUrl + 'change_state_product_dish', data);
     }
 
     //*Delete* for delete info

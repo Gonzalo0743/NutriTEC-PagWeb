@@ -17,7 +17,7 @@ import { MainPageComponent } from './Pages/MainPage/main-page/main-page.componen
 import { RegisterNutriComponent } from './Pages/Registers/register-nutri/register-nutri.component';
 import { RegisterClientComponent } from './Pages/Registers/register-client/register-client.component';
 import { AdminLandPageComponent } from './Pages/Admin/admin-land-page/admin-land-page.component';
-import { ProductApprovalComponent } from './Pages/Admin/product-approval/product-approval.component';
+
 import { PaymentReportComponent } from './Pages/Admin/payment-report/payment-report.component';
 import { ClientLandPageComponent } from './Pages/Client/client-land-page/client-land-page.component';
 import { RegisterLandPageComponent } from './Pages/Client/RegisterData/register-land-page/register-land-page.component';
@@ -56,6 +56,12 @@ import { ShowAllPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansMan
 import { ClientInfoComponent } from './Pages/Client/client-info/client-info.component';
 import { AdminInfoComponent } from './Pages/Admin/admin-info/admin-info.component';
 import { NutriInfoComponent } from './Pages/Nutri/nutri-info/nutri-info.component';
+import { AddAdminComponent } from './Pages/Admin/add-admin/add-admin.component';
+import { ChangeDishStateComponent } from './Pages/Admin/ProductApproval/change-dish-state/change-dish-state.component';
+import { GetApprovedProductsComponent } from './Pages/Admin/ProductApproval/get-approved-products/get-approved-products.component';
+import { GetDisapprovedProductsComponent } from './Pages/Admin/ProductApproval/get-disapproved-products/get-disapproved-products.component';
+import { GetAllProductsStateComponent } from './Pages/Admin/ProductApproval/get-all-products-state/get-all-products-state.component';
+import { ProductApprovalLandPageComponent } from './Pages/Admin/ProductApproval/product-approval-land-page/product-approval-land-page.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +77,6 @@ import { NutriInfoComponent } from './Pages/Nutri/nutri-info/nutri-info.componen
     RegisterNutriComponent,
     RegisterClientComponent,
     AdminLandPageComponent,
-    ProductApprovalComponent,
     PaymentReportComponent,
     ClientLandPageComponent,
     RegisterLandPageComponent,
@@ -109,7 +114,13 @@ import { NutriInfoComponent } from './Pages/Nutri/nutri-info/nutri-info.componen
     ShowAllPlanComponent,
     ClientInfoComponent,
     AdminInfoComponent,
-    NutriInfoComponent
+    NutriInfoComponent,
+    AddAdminComponent,
+    ChangeDishStateComponent,
+    GetApprovedProductsComponent,
+    GetDisapprovedProductsComponent,
+    GetAllProductsStateComponent,
+    ProductApprovalLandPageComponent
   ],
   imports: [
     BrowserModule,

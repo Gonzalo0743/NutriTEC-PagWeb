@@ -11,7 +11,7 @@ import { ClientLandPageComponent } from './Pages/Client/client-land-page/client-
 import { AdminLandPageComponent } from './Pages/Admin/admin-land-page/admin-land-page.component';
 import { NutriLandPageComponent } from './Pages/Nutri/nutri-land-page/nutri-land-page.component';
 import { PaymentReportComponent } from './Pages/Admin/payment-report/payment-report.component';
-import { ProductApprovalComponent } from './Pages/Admin/product-approval/product-approval.component';
+
 import { MealManagementLandPageComponent } from './Pages/Client/MealManagement/meal-management-land-page/meal-management-land-page.component';
 import { ProdDishLandPageComponent } from './Pages/Client/MealManagement/ProductsDishes/prod-dish-land-page/prod-dish-land-page.component';
 import { RecipesLandPageComponent } from './Pages/Client/MealManagement/Recipes/recipes-land-page/recipes-land-page.component';
@@ -47,6 +47,10 @@ import { ShowAllPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansMan
 import { ClientInfoComponent } from './Pages/Client/client-info/client-info.component';
 import { AdminInfoComponent } from './Pages/Admin/admin-info/admin-info.component';
 import { NutriInfoComponent } from './Pages/Nutri/nutri-info/nutri-info.component';
+import { AddAdminComponent } from './Pages/Admin/add-admin/add-admin.component';
+import { ChangeDishStateComponent } from './Pages/Admin/ProductApproval/change-dish-state/change-dish-state.component';
+import { GetAllProductsStateComponent } from './Pages/Admin/ProductApproval/get-all-products-state/get-all-products-state.component';
+import { ProductApprovalLandPageComponent } from './Pages/Admin/ProductApproval/product-approval-land-page/product-approval-land-page.component';
 
 const routes: Routes = [
   {
@@ -88,10 +92,6 @@ const routes: Routes = [
   {
     path:'PaymentReport',
     component: PaymentReportComponent
-  },
-  {
-    path:'ProductApproval',
-    component: ProductApprovalComponent
   },
   {
     path:'MealManagementLandPage',
@@ -232,6 +232,22 @@ const routes: Routes = [
   {
     path:'NutriInfo',
     component:NutriInfoComponent
+  },
+  {
+    path:'AddAdmin',
+    component:AddAdminComponent
+  },
+  {
+    path:'ChangeDishState',
+    component:ChangeDishStateComponent
+  },
+  {
+    path:'GetAllProductsState',
+    component:GetAllProductsStateComponent
+  },
+  {
+    path:'ProductApprovalLandPage',
+    component:ProductApprovalLandPageComponent
   }
 
 ];

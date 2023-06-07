@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/1fedfb11-3ca4-47be-b5ca-8b65faf9e0e0/resourceGroups/NutriTEC-WebPage_group/providers/Microsoft.Web/sites/NutriTEC-WebPage",
+    "appService.deploySubpath": "dist\\nutri-tec-pag-web"
+}

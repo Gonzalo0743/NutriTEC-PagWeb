@@ -4,6 +4,8 @@ import { AllFunctionsService } from 'src/app/Functions/all-functions.service';
 import { Router } from '@angular/router';
 
 import { AdminData } from 'src/app/Models/AdminInfo.interface';
+
+
 @Component({
   selector: 'app-admin-info',
   templateUrl: './admin-info.component.html',
@@ -21,7 +23,7 @@ export class AdminInfoComponent {
    * @returns A list with all the branches
    */
   ngOnInit(): void{
-    this.DataAdmin = this.service.DataClient;
+    this.DataAdmin = this.service.DataAdmin;
     console.log(this.DataAdmin);
 
     this.dataProof = Array.of(this.DataAdmin);

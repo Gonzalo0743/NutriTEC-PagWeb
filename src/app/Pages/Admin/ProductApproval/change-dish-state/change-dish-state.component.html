@@ -1,0 +1,42 @@
+<app-header-admin></app-header-admin>
+
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Change Dish State</h1>
+    <h4 class="mb-3">The "Barcode" of the dish is the identifier to edit the specific state of the dish.</h4>
+  </div>
+  <!-- Title -->
+
+  
+  <form [formGroup]="ChangeDishStateForm" (ngSubmit)="proceedChangeDishState()">
+    <!--EmployeeID and BranchName -->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+            <input type="text" formControlName="barcode" id="form3Example1" class="form-control"/>
+            <label class="form-label" for="form3Example1">Barcode</label>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+            <input type="number" formControlName="state" id="form3Example2" class="form-control" />
+            <label class="form-label" for="form3Example2">Status</label>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Submit button -->
+    <div class="d-flex align-items-center justify-content-center pb-4">
+        <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">Change</button>
+    </div>
+
+    <!-- Back button -->
+    <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/ProductApprovalLandPage">Back</button>
+    </div>
+
+
+
+    
+</form>
