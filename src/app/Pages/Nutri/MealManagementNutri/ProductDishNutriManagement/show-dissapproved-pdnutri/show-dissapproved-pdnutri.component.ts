@@ -22,7 +22,7 @@ export class ShowDissapprovedPDNutriComponent {
    */
   ngOnInit(): void{
 
-    this.service.getApprovedProdDish().subscribe(item =>{
+    this.service.getDisapprovedProdDish().subscribe(item =>{
 
       this.json = item;
 

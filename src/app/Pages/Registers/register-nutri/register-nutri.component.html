@@ -115,7 +115,11 @@
 
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="payment_type" id="form3Example2" class="form-control" />
+                    <select class="form-select" formControlName="payment_type"> 
+                      <option value="1">Semanal</option>
+                      <option value="2">Mensual</option>
+                      <option value="3">Anual</option>
+                    </select>
                     <label class="form-label" for="form3Example2">Payment Type</label>
                   </div>
                 </div>

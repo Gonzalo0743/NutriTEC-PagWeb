@@ -53,7 +53,11 @@
                   </div>
                 </div>
               </div>
-
+              
+              <div *ngIf="PlanAssignmentForm.errors?.['unauthenticated']">Barcode or Client ID incorrect!</div>
+              <div>
+                <h2></h2>
+              </div>
 
 
               

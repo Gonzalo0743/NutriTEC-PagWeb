@@ -36,7 +36,7 @@ export class ChangeDishStateComponent {
         this.service.putChangeDishState(formObj).subscribe(item => {
           this.jsonResponse = item;
           console.log(this.jsonResponse);
-          this.router.navigate(['/EmployeeManagement']);
+          this.router.navigate(['/ProductApprovalLandPage']);
         })
       }
       else{

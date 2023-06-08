@@ -20,8 +20,11 @@
         </div>
         <div class="col-md-6 mb-4">
             <div class="form-outline">
-            <input type="number" formControlName="state" id="form3Example2" class="form-control" />
-            <label class="form-label" for="form3Example2">Status</label>
+                <select class="form-select" formControlName="state"> 
+                    <option value=0>Unapproved</option>
+                    <option value=1>Approved</option>
+                    <option value=2>Rejected</option>
+                  </select>
             </div>
         </div>
     </div>
