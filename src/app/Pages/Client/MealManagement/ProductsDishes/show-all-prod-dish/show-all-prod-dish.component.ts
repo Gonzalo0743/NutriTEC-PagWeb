@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AllFunctionsService } from 'src/app/Functions/all-functions.service';
 import { Router } from '@angular/router';
-import { Temperature } from 'src/app/Models/Prueba.interface';
+import { AllProductsDishesData } from 'src/app/Models/AllProductsDishes.interface';
 
 @Component({
   selector: 'app-show-all-prod-dish',
@@ -10,7 +10,8 @@ import { Temperature } from 'src/app/Models/Prueba.interface';
   styleUrls: ['./show-all-prod-dish.component.css']
 })
 export class ShowAllProdDishComponent {
-  Prueba: Temperature[] = [];
+  ProductsDishesData: AllProductsDishesData[] = [];
+  json:any;
 
   constructor(private builder: FormBuilder, private service: AllFunctionsService, private router:Router){}
 
@@ -20,20 +21,16 @@ export class ShowAllProdDishComponent {
    */
   ngOnInit(): void{
 
-    this.service.getAllProdDish().subscribe(item =>{
+    this.service.getApprovedProdDish().subscribe(item =>{
 
-      this.Prueba = item;
+      this.json = item;
 
-      console.log(this.Prueba);
+      this.ProductsDishesData = this.json.result;
+
+      console.log(this.ProductsDishesData);
     
     })
-
   }
-
-  consultTemperature(temperatureC: any){
-    console.log(temperatureC);
-  }
-
    
     
 }

@@ -17,21 +17,24 @@ export class RegisterNutriComponent {
 
     createNutriForm = this.builder.group({
 
+      employee_id: this.builder.control('', Validators.required),
+      email: this.builder.control('', Validators.required),
       name: this.builder.control('', Validators.required),
       second_name: this.builder.control(''),
       lname1: this.builder.control('', Validators.required),
       lname2: this.builder.control(''),
-      employee_id: this.builder.control('', Validators.required),
-      nutritionist_code: this.builder.control('', Validators.required),
+      password: this.builder.control('', Validators.required),
       bdate: this.builder.control('', [Validators.required, Validators.pattern(/^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$/)]),
+      profile_pic: this.builder.control('', Validators.required),
+      credit_card: this.builder.control('', Validators.required),
+      nutritionist_code: this.builder.control('', Validators.required),
       bmi: this.builder.control('', Validators.required),
       weight: this.builder.control('', Validators.required),
       address: this.builder.control('', Validators.required),
-      credit_card: this.builder.control('', Validators.required),
       payment_type: this.builder.control('', Validators.required),
-      profile_pic: this.builder.control('', Validators.required),
-      email: this.builder.control('', Validators.required),
-      password: this.builder.control('', Validators.required),
+      
+      
+      
       
 
     })

@@ -53,6 +53,7 @@ import { GetAllProductsStateComponent } from './Pages/Admin/ProductApproval/get-
 import { ProductApprovalLandPageComponent } from './Pages/Admin/ProductApproval/product-approval-land-page/product-approval-land-page.component';
 import { GetApprovedProductsComponent } from './Pages/Admin/ProductApproval/get-approved-products/get-approved-products.component';
 import { GetDisapprovedProductsComponent } from './Pages/Admin/ProductApproval/get-disapproved-products/get-disapproved-products.component';
+import { ShowDissapprovedPDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/show-dissapproved-pdnutri/show-dissapproved-pdnutri.component';
 
 const routes: Routes = [
   {
@@ -186,6 +187,10 @@ const routes: Routes = [
   {
     path:'ShowAllPDNutri',
     component:ShowAllPdNutriComponent
+  },
+  {
+    path:'ShowDisapprovedProducts',
+    component:ShowDissapprovedPDNutriComponent
   },
   {
     path:'AddPDNutri',

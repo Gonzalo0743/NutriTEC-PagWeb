@@ -5,11 +5,11 @@ import { Router } from '@angular/router';
 import { AllProductsDishesData } from 'src/app/Models/AllProductsDishes.interface';
 
 @Component({
-  selector: 'app-show-all-pd-nutri',
-  templateUrl: './show-all-pd-nutri.component.html',
-  styleUrls: ['./show-all-pd-nutri.component.css']
+  selector: 'app-show-dissapproved-pdnutri',
+  templateUrl: './show-dissapproved-pdnutri.component.html',
+  styleUrls: ['./show-dissapproved-pdnutri.component.css']
 })
-export class ShowAllPdNutriComponent {
+export class ShowDissapprovedPDNutriComponent {
 
   ProductsDishesData: AllProductsDishesData[] = [];
   json:any;

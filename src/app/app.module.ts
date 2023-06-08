@@ -62,6 +62,7 @@ import { GetApprovedProductsComponent } from './Pages/Admin/ProductApproval/get-
 import { GetDisapprovedProductsComponent } from './Pages/Admin/ProductApproval/get-disapproved-products/get-disapproved-products.component';
 import { GetAllProductsStateComponent } from './Pages/Admin/ProductApproval/get-all-products-state/get-all-products-state.component';
 import { ProductApprovalLandPageComponent } from './Pages/Admin/ProductApproval/product-approval-land-page/product-approval-land-page.component';
+import { ShowDissapprovedPDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/show-dissapproved-pdnutri/show-dissapproved-pdnutri.component';
 
 @NgModule({
   declarations: [
@@ -120,7 +121,8 @@ import { ProductApprovalLandPageComponent } from './Pages/Admin/ProductApproval/
     GetApprovedProductsComponent,
     GetDisapprovedProductsComponent,
     GetAllProductsStateComponent,
-    ProductApprovalLandPageComponent
+    ProductApprovalLandPageComponent,
+    ShowDissapprovedPDNutriComponent
   ],
   imports: [
     BrowserModule,

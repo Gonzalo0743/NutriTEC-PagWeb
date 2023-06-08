@@ -12,6 +12,7 @@ import { AllProductsDishesData } from 'src/app/Models/AllProductsDishes.interfac
 export class GetDisapprovedProductsComponent {
 
   ProductsDishesData: AllProductsDishesData[] = [];
+  json:any;
 
   constructor(private builder: FormBuilder, private service: AllFunctionsService, private router:Router){}
 
@@ -23,7 +24,8 @@ export class GetDisapprovedProductsComponent {
 
     this.service.getDisapprovedProdDish().subscribe(item =>{
 
-      this.ProductsDishesData = item;
+      this.json = item;
+      this.ProductsDishesData = this.json.result;
 
       console.log(this.ProductsDishesData);
     
