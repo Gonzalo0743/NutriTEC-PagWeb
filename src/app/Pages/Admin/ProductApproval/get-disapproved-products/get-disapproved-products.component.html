@@ -1,1 +1,50 @@
-<p>get-disapproved-products works!</p>
+<app-header-admin></app-header-admin>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Disapproved Products & Dishes</h1>
+  </div>
+  <!-- Title -->
+
+  <table class="table table-light">
+    <thead>
+      <tr>
+        <th scope="col">Barcode</th>
+        <th scope="col">State</th>
+        <th scope="col">Vitamins</th>
+        <th scope="col">Calcium</th>
+        <th scope="col">Iron</th>
+        <th scope="col">Sodium</th>
+        <th scope="col">Portion Size</th>
+        <th scope="col">Energy</th>
+        <th scope="col">Fat</th>
+        <th scope="col">Carbs</th>
+        <th scope="col">Protein</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let data of ProductsDishesData">
+        <th scope="row">{{data.barcode}}</th>
+        <td>{{data.sstate}}</td>
+        <td>{{data.vitamins}}</td>
+        <td>{{data.calcium}}</td>
+        <td>{{data.iron}}</td>
+        <td>{{data.sodium}}</td>
+        <td>{{data.portion_size}}</td>
+        <td>{{data.energy}}</td>
+        <td>{{data.fat}}</td>
+        <td>{{data.carbs}}</td>
+        <td>{{data.protein}}</td>
+        <td>{{data.description}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+     <!-- Back button -->
+     <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/ProductApprovalLandPage">Back</button>
+    </div>

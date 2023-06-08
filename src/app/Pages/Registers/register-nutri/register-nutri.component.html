@@ -19,18 +19,18 @@
             <h2 class="fw-bold mb-5">Nutritionist Registration</h2>
             <h3 class="mb-1">Please, fill out this form:</h3>
             <!--<form [formGroup]="createClientForm" (ngSubmit)="proceedAddClient()">-->
-            <form>
+            <form [formGroup]="createNutriForm" (ngSubmit)="proceedAddNutri()">
               <!--First and Second name -->
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="fname1" id="Fnamelabel" class="form-control"/>
+                    <input type="text" formControlName="name" id="Fnamelabel" class="form-control"/>
                     <label class="form-label" for="form3Example1">First name</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="fname2" id="Snamelabel" class="form-control" />
+                    <input type="text" formControlName="second_name" id="Snamelabel" class="form-control" />
                     <label class="form-label" for="form3Example2">Second name</label>
                   </div>
                 </div>
@@ -40,13 +40,13 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="last_name1" id="form3Example1" class="form-control" />
+                    <input type="text" formControlName="lname1" id="form3Example1" class="form-control" />
                     <label class="form-label" for="form3Example1">Last name (1)</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="last_name2" id="form3Example2" class="form-control" />
+                    <input type="text" formControlName="lname2" id="form3Example2" class="form-control" />
                     <label class="form-label" for="form3Example2">Last name (2)</label>
                   </div>
                 </div>
@@ -56,14 +56,14 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="id_Nutri" id="form3Example1" class="form-control" />
+                    <input type="text" formControlName="employee_id" id="form3Example1" class="form-control" />
                     <label class="form-label" for="form3Example1">Identification Number</label>
                   </div>
                 </div>
 
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="number" formControlName="NutriCode" id="form3Example2" class="form-control" />
+                    <input type="text" formControlName="nutritionist_code" id="form3Example2" class="form-control" />
                     <label class="form-label" for="form3Example2">Nutritionist Code</label>
                   </div>
                 </div>
@@ -73,24 +73,25 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="birth_Date" id="form3Example1" class="form-control" />
+                    <input type="date" formControlName="bdate" id="form3Example1" class="form-control" />
                     <label class="form-label" for="form3Example1">Birthdate</label>
                   </div>
                 </div>
 
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="number" formControlName="bmi" id="form3Example2" class="form-control" />
+                    <input type="text" formControlName="bmi" id="form3Example2" class="form-control" />
                     <label class="form-label" for="form3Example2">Body Mass Index (BMI)</label>
                   </div>
                 </div>
               </div>
+              <!--div *ngIf="f.dob.errors.pattern">Date of Birth must be a valid date in the format YYYY-MM-DD</div-->
 
               <!-- Weight and Adress -->
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="number" formControlName="weight" id="form3Example1" class="form-control" />
+                    <input type="text" formControlName="weight" id="form3Example1" class="form-control" />
                     <label class="form-label" for="form3Example1">Weight (Kg)</label>
                   </div>
                 </div>
@@ -107,14 +108,14 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="number" formControlName="CardNumber" id="form3Example1" class="form-control" />
+                    <input type="text" formControlName="credit_card" id="form3Example1" class="form-control" />
                     <label class="form-label" for="form3Example1">Card number</label>
                   </div>
                 </div>
 
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="PaymentType" id="form3Example2" class="form-control" />
+                    <input type="text" formControlName="payment_type" id="form3Example2" class="form-control" />
                     <label class="form-label" for="form3Example2">Payment Type</label>
                   </div>
                 </div>
@@ -122,7 +123,7 @@
 
               <!-- Photo input -->
               <div class="form-outline mb-4">
-                <input type="file" formControlName="photo" id="form3Example3" class="form-control" />
+                <input type="text" formControlName="profile_pic" id="form3Example3" class="form-control" />
                 <label class="form-label" for="form3Example3">Photo</label>
               </div>
   

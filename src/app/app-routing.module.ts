@@ -51,6 +51,8 @@ import { AddAdminComponent } from './Pages/Admin/add-admin/add-admin.component';
 import { ChangeDishStateComponent } from './Pages/Admin/ProductApproval/change-dish-state/change-dish-state.component';
 import { GetAllProductsStateComponent } from './Pages/Admin/ProductApproval/get-all-products-state/get-all-products-state.component';
 import { ProductApprovalLandPageComponent } from './Pages/Admin/ProductApproval/product-approval-land-page/product-approval-land-page.component';
+import { GetApprovedProductsComponent } from './Pages/Admin/ProductApproval/get-approved-products/get-approved-products.component';
+import { GetDisapprovedProductsComponent } from './Pages/Admin/ProductApproval/get-disapproved-products/get-disapproved-products.component';
 
 const routes: Routes = [
   {
@@ -246,9 +248,17 @@ const routes: Routes = [
     component:GetAllProductsStateComponent
   },
   {
+    path:'ProductsApproved',
+    component:GetApprovedProductsComponent
+  },
+  {
+    path:'ProductsDisapproved',
+    component:GetDisapprovedProductsComponent
+  },
+  {
     path:'ProductApprovalLandPage',
     component:ProductApprovalLandPageComponent
-  }
+  },
 
 ];
 

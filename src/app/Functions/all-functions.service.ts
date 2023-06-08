@@ -44,6 +44,16 @@ export class AllFunctionsService {
 
     return this.http.get<AllProductsDishesData[]>(this.rootUrl + 'get_all_products_dishes')
   }
+
+  public getApprovedProdDish():Observable<AllProductsDishesData[]>{
+
+    return this.http.get<AllProductsDishesData[]>(this.rootUrl + 'get_aproved_product_dish')
+  }
+
+  public getDisapprovedProdDish():Observable<AllProductsDishesData[]>{
+
+    return this.http.get<AllProductsDishesData[]>(this.rootUrl + 'get_unaproved_product_dish')
+  }
   
 
 
@@ -81,7 +91,7 @@ export class AllFunctionsService {
 
   public addPlan(data:any){
 
-    return this.http.post(this.rootUrl + 'CAMBIAR',data);
+    return this.http.post(this.rootUrl + 'create_eating_plan',data);
 
   }
 
@@ -94,6 +104,16 @@ export class AllFunctionsService {
   public addAdmin(data:any){
     return this.http.post(this.rootUrl + 'add_admin', data);
   }
+
+  public addNutri(data:any){
+    return this.http.post(this.rootUrl + 'add_nutritionist',data)
+  }
+
+  public addPlanAssignment(data:any){
+    return this.http.post(this.rootUrl + 'assign_daily_consump', data)
+  }
+
+  
 
   //*Gets* for show specific info
   /**
