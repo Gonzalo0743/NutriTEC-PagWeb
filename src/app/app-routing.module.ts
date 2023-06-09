@@ -31,7 +31,6 @@ import { EditRecipeComponent } from './Pages/Client/MealManagement/Recipes/edit-
 import { AddPDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/add-pdnutri/add-pdnutri.component';
 import { EditPDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/edit-pdnutri/edit-pdnutri.component';
 import { ConsultPDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/consult-pdnutri/consult-pdnutri.component';
-import { DeletePDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/delete-pdnutri/delete-pdnutri.component';
 import { ShowAllProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/show-all-prod-dish/show-all-prod-dish.component';
 import { ShowAllRecipeComponent } from './Pages/Client/MealManagement/Recipes/show-all-recipe/show-all-recipe.component';
 import { ShowAllPdNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/show-all-pd-nutri/show-all-pd-nutri.component';
@@ -63,6 +62,10 @@ import { GetClientByNutriComponent } from './Pages/Nutri/PatientManagement/get-c
 import { SearchClientComponent } from './Pages/Nutri/PatientManagement/search-client/search-client.component';
 import { UpdateClientMeasurementsComponent } from './Pages/Nutri/PatientManagement/update-client-measurements/update-client-measurements.component';
 import { GetClientEatingPlanComponent } from './Pages/Nutri/PatientManagement/get-client-eating-plan/get-client-eating-plan.component';
+import { AssignProductToRecipeComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/assign-product-to-recipe/assign-product-to-recipe.component';
+import { GetProductsByRecipeComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/get-products-by-recipe/get-products-by-recipe.component';
+
+
 
 const routes: Routes = [
   {
@@ -202,8 +205,12 @@ const routes: Routes = [
     component:ConsultPDNutriComponent
   },
   {
-    path:'DeletePDNutri',
-    component:DeletePDNutriComponent
+    path:'AssignProductToRecipe',
+    component:AssignProductToRecipeComponent
+  },
+  {
+    path:'GetProductsByRecipe',
+    component:GetProductsByRecipeComponent
   },
   {
     path:'ClientInfo',

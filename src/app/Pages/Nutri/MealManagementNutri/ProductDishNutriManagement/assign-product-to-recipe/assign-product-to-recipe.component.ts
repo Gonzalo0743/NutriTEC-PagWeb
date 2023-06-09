@@ -5,45 +5,40 @@ import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
-  selector: 'app-assign-daily-consumption',
-  templateUrl: './assign-daily-consumption.component.html',
-  styleUrls: ['./assign-daily-consumption.component.css']
+  selector: 'app-assign-product-to-recipe',
+  templateUrl: './assign-product-to-recipe.component.html',
+  styleUrls: ['./assign-product-to-recipe.component.css']
 })
-export class AssignDailyConsumptionComponent {
+export class AssignProductToRecipeComponent {
 
   constructor(private builder: FormBuilder, private service: AllFunctionsService,
     private router: Router){}
 
     jsonResponse: any;
 
-    PlanAssignmentForm = this.builder.group({
-
+    AssignProductRecipeForm = this.builder.group({
       barcode: this.builder.control('', Validators.required),
-      client_id: this.builder.control('', Validators.required),
-      eating_time: this.builder.control('', Validators.required),
-      datec: this.builder.control('', [Validators.required, Validators.pattern(/^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$/)]),
+      recipe_id: this.builder.control('', Validators.required),
       
-
-
     })
     /**
    * @description This function calls the function of the api to add a new employee to the system
    * @returns A succesfull register of the new employee or an error
    */
-    proceedPlanAssignment(){
-      let formObj = this.PlanAssignmentForm.getRawValue();
+    proceedAssignProductRecipe(){
+      let formObj = this.AssignProductRecipeForm.getRawValue();
       console.log(formObj);
 
-      if(this.PlanAssignmentForm.valid){
+      if(this.AssignProductRecipeForm.valid){
 
-        this.service.addAssignDailyConsumption(formObj).subscribe(item => {
+        this.service.addAssignProductToRecipe(formObj).subscribe(item => {
           this.jsonResponse = item;
           console.log(this.jsonResponse);
-          this.router.navigate(['/PatientManagementLandPage']);
+          this.router.navigate(['/ProdDishNutriLandPage']);
         },
         (error: HttpErrorResponse) => {
            console.log(error.error); // Muestra el error en la consola
-          this.PlanAssignmentForm.setErrors({unauthenticated: true});
+          this.AssignProductRecipeForm.setErrors({unauthenticated: true});
           
         }
         )

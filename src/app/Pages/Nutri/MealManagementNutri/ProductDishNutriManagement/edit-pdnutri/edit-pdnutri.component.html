@@ -1,1 +1,120 @@
-<p>edit-pdnutri works!</p>
+<app-header-nutritionist></app-header-nutritionist>
+
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Edit Product or Dish</h1>
+    <h4 class="mb-3">Enter the "Barcode" that you want to edit</h4>
+  </div>
+  <!-- Title -->
+
+  <form [formGroup]="EditProductDishForm" (ngSubmit)="proceedEditProductDish()">
+              
+    <!--Barcode-->
+    <div class="form-outline">
+        <input type="text" formControlName="barcode" id="Fnamelabel" class="form-control"/>
+        <label class="form-label" for="form3Example1">Barcode</label>
+    </div>
+        
+        
+
+      <!--Vitamins and Calcium -->
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="form-outline">
+            <input type="text" formControlName="vitamins" id="form3Example1" class="form-control" />
+            <label class="form-label" for="form3Example1">Vitamins</label>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="form-outline">
+            <input type="text" formControlName="calcium" id="form3Example2" class="form-control" />
+            <label class="form-label" for="form3Example2">Calcium</label>
+          </div>
+        </div>
+      </div>
+
+      <!--Iron and Energy -->
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="form-outline">
+            <input type="text" formControlName="iron" id="form3Example1" class="form-control" />
+            <label class="form-label" for="form3Example1">Iron</label>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="form-outline">
+            <input type="text" formControlName="energy" id="form3Example2" class="form-control" />
+            <label class="form-label" for="form3Example2">Energy</label>
+          </div>
+        </div>
+      </div>
+
+      <!--Sodium and Carbs -->
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="form-outline">
+            <input type="text" formControlName="sodium" id="form3Example1" class="form-control" />
+            <label class="form-label" for="form3Example1">Sodium</label>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="form-outline">
+            <input type="text" formControlName="carbs" id="form3Example2" class="form-control" />
+            <label class="form-label" for="form3Example2">Carbs</label>
+          </div>
+        </div>
+      </div>
+
+      <!--Fat and Protein -->
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="form-outline">
+            <input type="text" formControlName="fat" id="form3Example1" class="form-control" />
+            <label class="form-label" for="form3Example1">Fat</label>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="form-outline">
+            <input type="text" formControlName="protein" id="form3Example2" class="form-control" />
+            <label class="form-label" for="form3Example2">Protein</label>
+          </div>
+        </div>
+      </div>
+
+    <!--Description and Portion Size -->
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="form-outline">
+            <input type="text" formControlName="description" id="form3Example1" class="form-control" />
+            <label class="form-label" for="form3Example1">Description</label>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="form-outline">
+            <input type="text" formControlName="portion_size" id="form3Example2" class="form-control" />
+            <label class="form-label" for="form3Example2">Portion Size</label>
+          </div>
+        </div>
+      </div>
+
+
+      
+      
+      <!-- Submit button -->
+      <div class="d-flex align-items-center justify-content-center pb-4">
+        <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">Add</button>
+      </div>
+
+      <!-- Back button -->
+      <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" routerLink="/ProdDishNutriLandPage">Back</button>
+      </div>
+    </form>
+  
+
+  
+    
+  <!-- Section: Design Block -->

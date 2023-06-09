@@ -38,7 +38,6 @@ import { PDNutriLandPageComponent } from './Pages/Nutri/MealManagementNutri/Prod
 import { AddPDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/add-pdnutri/add-pdnutri.component';
 import { EditPDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/edit-pdnutri/edit-pdnutri.component';
 import { ConsultPDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/consult-pdnutri/consult-pdnutri.component';
-import { DeletePDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/delete-pdnutri/delete-pdnutri.component';
 import { ProdDishLandPageComponent } from './Pages/Client/MealManagement/ProductsDishes/prod-dish-land-page/prod-dish-land-page.component';
 import { RecipesLandPageComponent } from './Pages/Client/MealManagement/Recipes/recipes-land-page/recipes-land-page.component';
 import { PlansLandPageComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/plans-land-page/plans-land-page.component';
@@ -73,6 +72,9 @@ import { GetEatingPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansM
 import { GetNutritionistPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/get-nutritionist-plan/get-nutritionist-plan.component';
 import { GetEatPlanByNutritionistComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/get-eat-plan-by-nutritionist/get-eat-plan-by-nutritionist.component';
 import { PatientManagementLandPageComponent } from './Pages/Nutri/PatientManagement/patient-management-land-page/patient-management-land-page.component';
+import { AssignProductToRecipeComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/assign-product-to-recipe/assign-product-to-recipe.component';
+import { GetProductsByRecipeComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/get-products-by-recipe/get-products-by-recipe.component';
+
 
 @NgModule({
   declarations: [
@@ -108,7 +110,6 @@ import { PatientManagementLandPageComponent } from './Pages/Nutri/PatientManagem
     AddPDNutriComponent,
     EditPDNutriComponent,
     ConsultPDNutriComponent,
-    DeletePDNutriComponent,
     ProdDishLandPageComponent,
     RecipesLandPageComponent,
     PlansLandPageComponent,
@@ -142,7 +143,10 @@ import { PatientManagementLandPageComponent } from './Pages/Nutri/PatientManagem
     GetEatingPlanComponent,
     GetNutritionistPlanComponent,
     GetEatPlanByNutritionistComponent,
-    PatientManagementLandPageComponent
+    PatientManagementLandPageComponent,
+    AssignProductToRecipeComponent,
+    GetProductsByRecipeComponent,
+
   ],
   imports: [
     BrowserModule,

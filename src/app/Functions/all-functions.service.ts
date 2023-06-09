@@ -71,37 +71,34 @@ export class AllFunctionsService {
    */
 
   public addProdDish(data:any){
-
     return this.http.post(this.rootUrl + 'CAMBIAR',data);
 
   }
 
   public addRecipe(data:any){
-
     return this.http.post(this.rootUrl + 'insert_recipe',data);
 
   }
 
   public addMeasures(data:any){
-
     return this.http.post(this.rootUrl + 'CAMBIAR',data);
 
   }
 
   public addDailyConsumption(data:any){
-
     return this.http.post(this.rootUrl + 'assign_daily_consumption',data);
+  }
 
+  public addAssignProductToRecipe(data:any){
+    return this.http.post(this.rootUrl + 'assign_product_to_recipe',data);
   }
 
   public addPlan(data:any){
-
     return this.http.post(this.rootUrl + 'create_eating_plan',data);
-
   }
 
   public addPDNutri(data:any){
-    return this.http.post(this.rootUrl + 'CAMBIAR',data);
+    return this.http.post(this.rootUrl + 'insert_product_dish',data);
   }
 
   public addAdmin(data:any){
@@ -149,8 +146,15 @@ export class AllFunctionsService {
 
   public getPDNutri(data:any){
 
-    return this.http.post(this.rootUrl + 'CAMBIAR',data);
+    return this.http.post(this.rootUrl + 'nutri_search_product',data);
   }
+
+  public getProductByRecipe(data:any){
+
+    return this.http.post(this.rootUrl + 'get_products_by_recipe',data);
+  }
+
+
 
     /**
    * @description This method is used to get the admins to verify the login
@@ -190,7 +194,6 @@ export class AllFunctionsService {
     }
 
     public getClientEatingPlan(data:any){
-
       return this.http.post(this.rootUrl + 'client_get_eating_plan',data);
     }
 
@@ -218,7 +221,7 @@ export class AllFunctionsService {
 
     public putEditPDNutri(data:any){
 
-      return this.http.put(this.rootUrl + 'CAMBIAR', data);
+      return this.http.put(this.rootUrl + 'update_product', data);
     }
 
     public putChangeDishState(data:any){
