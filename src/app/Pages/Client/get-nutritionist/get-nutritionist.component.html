@@ -1,0 +1,41 @@
+<app-header-client></app-header-client>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Nutritionist Info</h1>
+    <h4 class="mb-3">Here you can see your nutritionist info</h4>
+  </div>
+  <!-- Title -->
+
+  <form [formGroup]="getNutriForm">
+    <table class="table table-light">
+        <thead>
+          <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Last Name</th>
+
+          </tr>
+        </thead>
+        <tbody>
+    
+          <tr *ngFor="let data of response">
+            <th scope="row">{{data.employee_id}}</th>
+            <td>{{data.n_name}}</td>
+            <td>{{data.n_lname}}</td>
+
+        </tbody>
+      </table>
+      <div class="text-center pt-1 mb-5 pb-1">
+        <div *ngIf="getNutriForm.errors?.['unauthenticated']">You are not associate with a nutritionist</div>
+      </div>
+
+    
+
+     <!-- Back button -->
+     <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/ClientLandPage">Back</button>
+    </div>
+  </form>

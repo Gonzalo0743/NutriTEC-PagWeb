@@ -19,18 +19,18 @@
             <h2 class="fw-bold mb-5">Client Registration</h2>
             <h3 class="mb-1">Please, fill out this form:</h3>
             <!--<form [formGroup]="createClientForm" (ngSubmit)="proceedAddClient()">-->
-            <form>
+            <form [formGroup]="createClientForm" (ngSubmit)="proceedAddClient()">
               <!--First and Second name -->
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="fname1" id="Fnamelabel" class="form-control"/>
+                    <input type="text" formControlName="name" id="Fnamelabel" class="form-control"/>
                     <label class="form-label" for="form3Example1">First name</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="fname2" id="Snamelabel" class="form-control" />
+                    <input type="text" formControlName="second_name" id="Snamelabel" class="form-control" />
                     <label class="form-label" for="form3Example2">Second name</label>
                   </div>
                 </div>
@@ -40,13 +40,13 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="last_name1" id="form3Example1" class="form-control" />
+                    <input type="text" formControlName="lname1" id="form3Example1" class="form-control" />
                     <label class="form-label" for="form3Example1">Last name (1)</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="last_name2" id="form3Example2" class="form-control" />
+                    <input type="text" formControlName="lname2" id="form3Example2" class="form-control" />
                     <label class="form-label" for="form3Example2">Last name (2)</label>
                   </div>
                 </div>
@@ -57,32 +57,32 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="birth_Date" id="form3Example1" class="form-control" />
+                    <input type="date" formControlName="bdate" id="form3Example1" class="form-control" />
                     <label class="form-label" for="form3Example1">Birthdate</label>
                   </div>
                 </div>
 
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="number" formControlName="bmi" id="form3Example2" class="form-control" />
+                    <input type="text" formControlName="bmi" id="form3Example2" class="form-control" />
                     <label class="form-label" for="form3Example2">Body Mass Index (BMI)</label>
                   </div>
                 </div>
               </div>
 
-              <!-- Weight and Country -->
+              <!-- Weight and Client ID -->
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="number" formControlName="weight" id="form3Example1" class="form-control" />
+                    <input type="text" formControlName="weight" id="form3Example1" class="form-control" />
                     <label class="form-label" for="form3Example1">Weight (Kg)</label>
                   </div>
                 </div>
 
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="country" id="form3Example2" class="form-control" />
-                    <label class="form-label" for="form3Example2">Country</label>
+                    <input type="text" formControlName="client_id" id="form3Example2" class="form-control" />
+                    <label class="form-label" for="form3Example2">Client ID</label>
                   </div>
                 </div>
               </div>
@@ -105,15 +105,15 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="number" formControlName="waist" id="form3Example1" class="form-control" />
-                    <label class="form-label" for="form3Example1">Waist</label>
+                    <input type="text" formControlName="waist_size" id="form3Example1" class="form-control" />
+                    <label class="form-label" for="form3Example1">Waist Size</label>
                   </div>
                 </div>
 
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="neck" id="form3Example2" class="form-control" />
-                    <label class="form-label" for="form3Example2">Neck</label>
+                    <input type="text" formControlName="neck_size" id="form3Example2" class="form-control" />
+                    <label class="form-label" for="form3Example2">Neck Size</label>
                   </div>
                 </div>
               </div>
@@ -122,14 +122,14 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="number" formControlName="hips" id="form3Example1" class="form-control" />
-                    <label class="form-label" for="form3Example1">Hips</label>
+                    <input type="text" formControlName="hip_size" id="form3Example1" class="form-control" />
+                    <label class="form-label" for="form3Example1">Hips Size</label>
                   </div>
                 </div>
 
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="muscle" id="form3Example2" class="form-control" />
+                    <input type="text" formControlName="muslce_percentage" id="form3Example2" class="form-control" />
                     <label class="form-label" for="form3Example2">Muscle (%)</label>
                   </div>
                 </div>
@@ -139,23 +139,19 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="number" formControlName="Fat" id="form3Example1" class="form-control" />
+                    <input type="text" formControlName="fat_percentage" id="form3Example1" class="form-control" />
                     <label class="form-label" for="form3Example1">Fat (%)</label>
                   </div>
                 </div>
 
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" formControlName="calories" id="form3Example2" class="form-control" />
-                    <label class="form-label" for="form3Example2">Daily calorie intake</label>
+                    <input type="text" formControlName="last_month_meas" id="form3Example2" class="form-control" />
+                    <label class="form-label" for="form3Example2">Last Month Measurement</label>
                   </div>
                 </div>
               </div>
   
-              
-
-              
-
               
               <!-- Submit button -->
               <div class="d-flex align-items-center justify-content-center pb-4">

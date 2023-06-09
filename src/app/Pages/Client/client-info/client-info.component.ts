@@ -30,6 +30,9 @@ export class ClientInfoComponent {
     console.log(this.DataClient);
 
     this.dataProof = Array.of(this.DataClient);
+    console.log(this.dataProof);
+
+    console.log(this.dataProof[0].client_id);
     
   }
 

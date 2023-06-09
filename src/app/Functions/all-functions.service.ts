@@ -54,6 +54,11 @@ export class AllFunctionsService {
 
     return this.http.get<AllProductsDishesData[]>(this.rootUrl + 'get_unaproved_product_dish')
   }
+
+  public getClientApprovedProdDish():Observable<AllProductsDishesData[]>{
+
+    return this.http.get<AllProductsDishesData[]>(this.rootUrl + 'client_get_aproved_product_dish')
+  }
   
 
 
@@ -73,7 +78,7 @@ export class AllFunctionsService {
 
   public addRecipe(data:any){
 
-    return this.http.post(this.rootUrl + 'CAMBIAR',data);
+    return this.http.post(this.rootUrl + 'insert_recipe',data);
 
   }
 
@@ -85,7 +90,7 @@ export class AllFunctionsService {
 
   public addDailyConsumption(data:any){
 
-    return this.http.post(this.rootUrl + 'CAMBIAR',data);
+    return this.http.post(this.rootUrl + 'assign_daily_consumption',data);
 
   }
 
@@ -96,9 +101,7 @@ export class AllFunctionsService {
   }
 
   public addPDNutri(data:any){
-
     return this.http.post(this.rootUrl + 'CAMBIAR',data);
-
   }
 
   public addAdmin(data:any){
@@ -109,9 +112,16 @@ export class AllFunctionsService {
     return this.http.post(this.rootUrl + 'add_nutritionist',data)
   }
 
+  public addClient(data:any){
+    return this.http.post(this.rootUrl + 'add_client',data)
+  }
+
   public addPlanAssignment(data:any){
     return this.http.post(this.rootUrl + 'assign_daily_consump', data)
   }
+
+
+  
 
   
 
@@ -129,7 +139,7 @@ export class AllFunctionsService {
 
   public getRecipe(data:any){
 
-    return this.http.post(this.rootUrl + 'CAMBIAR',data);
+    return this.http.post(this.rootUrl + 'search_recipe',data);
   }
 
   public getPlan(data:any){
@@ -174,6 +184,16 @@ export class AllFunctionsService {
       return this.http.post(this.rootUrl + 'auth_nutritionist',data);
     }
 
+    public getNutriInfoForClient(data:any){
+
+      return this.http.post(this.rootUrl + 'get_nutritionist_by_client',data);
+    }
+
+    public getClientEatingPlan(data:any){
+
+      return this.http.post(this.rootUrl + 'client_get_eating_plan',data);
+    }
+
     //*Put* for edit info
 
     /**
@@ -188,7 +208,7 @@ export class AllFunctionsService {
 
     public putEditRecipe(data:any){
 
-      return this.http.put(this.rootUrl + 'CAMBIAR', data);
+      return this.http.put(this.rootUrl + 'update_recipe', data);
     }
 
     public putEditPlan(data:any){
@@ -204,6 +224,11 @@ export class AllFunctionsService {
     public putChangeDishState(data:any){
 
       return this.http.put(this.rootUrl + 'change_state_product_dish', data);
+    }
+
+    public putUpdateMeasures(data:any){
+
+      return this.http.put(this.rootUrl + 'update_measures', data);
     }
 
     //*Delete* for delete info
@@ -226,15 +251,8 @@ export class AllFunctionsService {
   }
 
   public deleteRecipe(data:any){
-    let address = this.rootUrl + 'CAMBIAR';
-    let Options = {
-      headers: new HttpHeaders({
-        'Content-type': 'application/json',
-      }),
-      body: data,
-    };
-    return this.http.delete(address,Options);
 
+    return this.http.put(this.rootUrl + 'delete_recipe', data);
   }
 
   public deletePlan(data:any){

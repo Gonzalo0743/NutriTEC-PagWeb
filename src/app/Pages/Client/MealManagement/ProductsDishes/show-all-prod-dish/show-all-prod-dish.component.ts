@@ -21,7 +21,7 @@ export class ShowAllProdDishComponent {
    */
   ngOnInit(): void{
 
-    this.service.getApprovedProdDish().subscribe(item =>{
+    this.service.getClientApprovedProdDish().subscribe(item =>{
 
       this.json = item;
 

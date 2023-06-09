@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { AllFunctionsService } from 'src/app/Functions/all-functions.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-measures-register',
@@ -6,5 +9,43 @@ import { Component } from '@angular/core';
   styleUrls: ['./measures-register.component.css']
 })
 export class MeasuresRegisterComponent {
+
+  constructor(private builder: FormBuilder, private service: AllFunctionsService,
+    private router: Router){}
+
+    jsonResponse: any;
+
+    MeasuresRegisterForm = this.builder.group({
+
+      client_id: this.builder.control('', Validators.required),//PK
+      muslce_percentage: this.builder.control('', Validators.required),
+      fat_percentage: this.builder.control('', Validators.required),
+      hip_size: this.builder.control('',Validators.required),
+      waist_size: this.builder.control('', Validators.required),
+      neck_size: this.builder.control('', Validators.required),
+      last_month_meas: this.builder.control('',Validators.required),
+      
+
+    })
+
+        /**
+   * @description This function calls the function of the api to edit a gear of the system
+   * @returns A succesfull edit of the selected gear or an error
+   */
+    proceedMeasuresRegisterRecipe(){
+      let formObj = this.MeasuresRegisterForm.getRawValue();
+      console.log(formObj);
+      if(this.MeasuresRegisterForm.valid){
+
+        this.service.putUpdateMeasures(formObj).subscribe(item => {
+          this.jsonResponse = item;
+          console.log(this.jsonResponse);
+          this.router.navigate(['/RegisterLandPage']);
+        })
+      }
+      else{
+        console.log("Error");
+      }
+    }
 
 }

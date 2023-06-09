@@ -1,1 +1,27 @@
-<p>delete-recipe works!</p>
+<app-header-client></app-header-client>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Consult Recipe</h1>
+    <h4 class="mb-3">Enter the recipe id that you want to show</h4>
+  </div>
+  <!-- Title -->
+  
+  <form [formGroup]="DeleteRecipeForm" (ngSubmit)="proceedDeleteRecipe()">
+    <div class="form-outline">
+        <input type="text" formControlName="recipe_id" id="form3Example1" class="form-control"/>
+        <label class="form-label" for="form3Example1">Recipe ID</label>
+    </div>
+
+    <!-- Submit button -->
+    <div class="d-flex align-items-center justify-content-center pb-4">
+        <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">Delete</button>
+    </div>
+
+     <!-- Back button -->
+     <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/RecipesLandPage">Back</button>
+    </div>
+  </form>

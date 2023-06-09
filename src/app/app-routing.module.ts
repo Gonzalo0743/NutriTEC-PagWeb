@@ -54,6 +54,8 @@ import { ProductApprovalLandPageComponent } from './Pages/Admin/ProductApproval/
 import { GetApprovedProductsComponent } from './Pages/Admin/ProductApproval/get-approved-products/get-approved-products.component';
 import { GetDisapprovedProductsComponent } from './Pages/Admin/ProductApproval/get-disapproved-products/get-disapproved-products.component';
 import { ShowDissapprovedPDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/show-dissapproved-pdnutri/show-dissapproved-pdnutri.component';
+import { EatingPlanComponent } from './Pages/Client/eating-plan/eating-plan.component';
+import { GetNutritionistComponent } from './Pages/Client/get-nutritionist/get-nutritionist.component';
 
 const routes: Routes = [
   {
@@ -264,6 +266,14 @@ const routes: Routes = [
     path:'ProductApprovalLandPage',
     component:ProductApprovalLandPageComponent
   },
+  {
+    path:'EatingPlan',
+    component:EatingPlanComponent
+  },
+  {
+    path:'GetNutriInfoForClient',
+    component:GetNutritionistComponent
+  }
 
 ];
 
