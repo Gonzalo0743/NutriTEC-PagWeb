@@ -1,2 +1,29 @@
 <app-header-admin></app-header-admin>
-<p>payment-report works!</p>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Payment Report</h1>
+    <h5 class="mb-3">The download of the file is starting, please wait a minute.</h5>
+  </div>
+  <!-- Title -->
+
+  <form>
+
+    
+    <!-- Submit button -->
+    <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" (click)="proceedPrintPDF(data)">Generate PDF</button>
+    </div>
+
+     <!-- Back button -->
+     <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/AdminLandPage">Back</button>
+    </div>
+
+
+
+    
+</form>
+

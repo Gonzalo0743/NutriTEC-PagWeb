@@ -1,1 +1,81 @@
-<p>add-recipe-nutri works!</p>
+
+<app-header-nutritionist></app-header-nutritionist>
+
+<!-- Section: Design Block -->
+<section class="text-center">
+    <!-- Background image -->
+    <div class="p-5 bg-image" style="
+          background-image: url('https://i.pinimg.com/originals/9b/20/d6/9b20d6f8b2361ef151b2e2dc4b85076a.jpg');
+          height: 300px;
+          "></div>
+    <!-- Background image -->
+  
+    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+          margin-top: -100px;
+          background: hsla(0, 0%, 100%, 0.8);
+          backdrop-filter: blur(30px);
+          ">
+      <div class="card-body py-5 px-md-5">
+  
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-5">Add Recipe from Nutritionist</h2>
+            <h3 class="mb-1">Please, fill out this form:</h3>
+            <!--<form [formGroup]="createClientForm" (ngSubmit)="proceedAddClient()">-->
+            
+            <form [formGroup]="AddRecipeNutriForm" (ngSubmit)="proceedAddRecipeNutri()">
+              
+            <!--Recipe ID and Portions -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" formControlName="recipe_id" id="Fnamelabel" class="form-control"/>
+                    <label class="form-label" for="form3Example1">Recipe ID</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" formControlName="portions" id="Snamelabel" class="form-control" />
+                    <label class="form-label" for="form3Example2">Portions</label>
+                  </div>
+                </div>
+              </div>
+
+              <!--Calories and Ingredients -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" formControlName="calories" id="form3Example1" class="form-control" />
+                    <label class="form-label" for="form3Example1">Calories</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" formControlName="ingredients" id="form3Example2" class="form-control" />
+                    <label class="form-label" for="form3Example2">Ingredients</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center pt-1 mb-5 pb-1">
+                <div *ngIf="AddRecipeNutriForm.errors?.['unauthenticated']">The recipe id already exist</div>
+              </div>
+
+              
+              
+              <!-- Submit button -->
+              <div class="d-flex align-items-center justify-content-center pb-4">
+                <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">Add</button>
+              </div>
+
+              <!-- Back button -->
+              <div class="d-flex align-items-center justify-content-center pb-4">
+                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" routerLink="/RecipeNutriLandPage">Back</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->

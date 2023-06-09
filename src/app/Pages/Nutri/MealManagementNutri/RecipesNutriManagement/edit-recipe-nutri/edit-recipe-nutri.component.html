@@ -1,1 +1,64 @@
-<p>edit-recipe-nutri works!</p>
+<app-header-nutritionist></app-header-nutritionist>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Edit Recipe</h1>
+    <h4 class="mb-3">Enter the recipe id that you want to edit</h4>
+  </div>
+  <!-- Title -->
+
+  <form [formGroup]="editRecipeNutriForm" (ngSubmit)="proceedEditNutriRecipe()">
+    <!--Recipe ID and Portions -->
+    <div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="form-outline">
+        <input type="text" formControlName="recipe_id" id="form3Example1" class="form-control"/>
+        <label class="form-label" for="form3Example1">Recipe ID</label>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="form-outline">
+        <input type="text" formControlName="portions" id="form3Example2" class="form-control" />
+        <label class="form-label" for="form3Example2">Portions</label>
+        </div>
+    </div>
+    </div>
+
+    <!--Calories and Ingredients-->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+            <input type="text" formControlName="calories" id="form3Example1" class="form-control"/>
+            <label class="form-label" for="form3Example1">Calories</label>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+            <input type="text" formControlName="ingredients" id="form3Example2" class="form-control" />
+            <label class="form-label" for="form3Example2">Ingredients</label>
+            </div>
+        </div>
+        </div>
+    
+
+
+    
+    <!-- Submit button -->
+    <div class="d-flex align-items-center justify-content-center pb-4">
+        <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">Edit</button>
+    </div>
+
+    <!-- Back button -->
+    <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/RecipeNutriLandPage">Back</button>
+    </div>
+
+
+
+    
+</form>
+
+
+    

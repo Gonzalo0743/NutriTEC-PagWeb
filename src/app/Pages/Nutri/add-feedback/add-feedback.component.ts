@@ -5,23 +5,20 @@ import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
-  selector: 'app-add-recipe',
-  templateUrl: './add-recipe.component.html',
-  styleUrls: ['./add-recipe.component.css']
+  selector: 'app-add-feedback',
+  templateUrl: './add-feedback.component.html',
+  styleUrls: ['./add-feedback.component.css']
 })
-export class AddRecipeComponent {
+export class AddFeedbackComponent {
 
   constructor(private builder: FormBuilder, private service: AllFunctionsService,
     private router: Router){}
 
     jsonResponse: any;
 
-    AddRecipeForm = this.builder.group({
-
-      recipe_id: this.builder.control('', Validators.required),
-      portions: this.builder.control('', Validators.required),
-      calories: this.builder.control('', Validators.required),
-      ingredients: this.builder.control('',Validators.required),
+    AddFeedbackForm = this.builder.group({
+      client_id: this.builder.control('', Validators.required),
+      nutritionist_message: this.builder.control('', Validators.required),
       
 
     })
@@ -29,23 +26,22 @@ export class AddRecipeComponent {
    * @description This function is to prepare the info of the client to send it to the api 
    * @returns Send the info to the api to create a new client
    */
-    proceedAddRecipe(){
-      let formObj = this.AddRecipeForm.getRawValue();
+    proceedAddFeedback(){
+      let formObj = this.AddFeedbackForm.getRawValue();
       console.log(formObj);
-      if(this.AddRecipeForm.valid){
+      if(this.AddFeedbackForm.valid){
 
-        this.service.addRecipe(formObj).subscribe(item => {
+        this.service.addFeedback(formObj).subscribe(item => {
           this.jsonResponse = item;
           console.log(this.jsonResponse);
-          this.router.navigate(['/RecipesLandPage']);
+          this.router.navigate(['/NutriLandPage']);
         },
         (error: HttpErrorResponse) => {
           console.log(error.error); // Muestra el error en la consola
-          this.AddRecipeForm.setErrors({unauthenticated: true});
+          this.AddFeedbackForm.setErrors({unauthenticated: true});
           
         })
       }
     }
-  
 
 }

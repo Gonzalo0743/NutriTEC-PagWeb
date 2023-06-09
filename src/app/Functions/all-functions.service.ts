@@ -6,6 +6,7 @@ import { ClientData } from '../Models/ClientInfo.interface';
 import { AdminData } from '../Models/AdminInfo.interface';
 import { NutriData } from '../Models/NutriInfo.interface';
 import { AllProductsDishesData } from '../Models/AllProductsDishes.interface';
+import { ConsultFeedback } from '../Models/MongoFeedback.interface';
 
 
 @Injectable({
@@ -14,6 +15,8 @@ import { AllProductsDishesData } from '../Models/AllProductsDishes.interface';
 export class AllFunctionsService {
 
   rootUrl = "https://nutritec-api-pg.azurewebsites.net/api/"
+
+  URLMongo = "https://nutritec-api-mongo.azurewebsites.net/api/"
 
 
   
@@ -59,6 +62,15 @@ export class AllFunctionsService {
 
     return this.http.get<AllProductsDishesData[]>(this.rootUrl + 'client_get_aproved_product_dish')
   }
+
+  public getFeedback():Observable<ConsultFeedback[]>{
+
+    return this.http.get<ConsultFeedback[]>(this.URLMongo + 'all_feedback')
+  }
+
+  public getPaymentReport(data:any){
+    return this.http.get(this.rootUrl + 'get_payment_report/{payment_type}/{email}/{name}/{second_name}/{lname1}/{lname2}/{credit_card}/{discount}/{total_amount}/{final_amount}'+data,{observe:'response',responseType:'blob'})
+  }
   
 
 
@@ -70,14 +82,17 @@ export class AllFunctionsService {
    * @returns The function to the api to create the product or dish
    */
 
-  public addProdDish(data:any){
-    return this.http.post(this.rootUrl + 'CAMBIAR',data);
+  public addProdDishClient(data:any){
+    return this.http.post(this.rootUrl + 'client_insert_product_dish',data);
 
   }
 
   public addRecipe(data:any){
     return this.http.post(this.rootUrl + 'insert_recipe',data);
+  }
 
+  public addRecipeNutri(data:any){
+    return this.http.post(this.rootUrl + 'nutri_insert_recipe',data);
   }
 
   public addMeasures(data:any){
@@ -125,6 +140,10 @@ export class AllFunctionsService {
     return this.http.post(this.rootUrl + 'assign_daily_consump', data)
   }
 
+  public addFeedback(data:any){
+    return this.http.post(this.URLMongo + 'insert_feedback', data)
+  }
+
 
   
 
@@ -137,14 +156,19 @@ export class AllFunctionsService {
    * @returns Response from the JSON if is correct or not
    */
 
-  public getProdDish(data:any){
+  public getProdDishClient(data:any){
 
-    return this.http.post(this.rootUrl + 'CAMBIAR',data);
+    return this.http.post(this.rootUrl + 'client_search_product',data);
   }
 
   public getRecipe(data:any){
 
     return this.http.post(this.rootUrl + 'search_recipe',data);
+  }
+
+  public getRecipeNutri(data:any){
+
+    return this.http.post(this.rootUrl + 'nutri_search_recipe',data);
   }
 
   public getPlan(data:any){
@@ -238,14 +262,19 @@ export class AllFunctionsService {
    * @param data 
    * @returns The function to the api to edit the specific branch
    */
-    public putEditProdDish(data:any){
+    public putEditProdDishClient(data:any){
 
-      return this.http.put(this.rootUrl + 'CAMBIAR', data);
+      return this.http.put(this.rootUrl + 'client_update_product', data);
     }
 
     public putEditRecipe(data:any){
 
       return this.http.put(this.rootUrl + 'update_recipe', data);
+    }
+
+    public putEditRecipeNutri(data:any){
+
+      return this.http.put(this.rootUrl + 'nutri_update_recipe', data);
     }
 
     public putEditPlan(data:any){
@@ -280,24 +309,19 @@ export class AllFunctionsService {
    * @param data 
    * @returns The function to the api to delete the specific branch
    */
-  public deleteProdDish(data:any){
-    let address = this.rootUrl + 'CAMBIAR';
-    let Options = {
-      headers: new HttpHeaders({
-        'Content-type': 'application/json',
-      }),
-      body: data,
-    };
-    return this.http.delete(address,Options);
-
-  }
 
   public deleteRecipe(data:any){
 
     return this.http.put(this.rootUrl + 'delete_recipe', data);
   }
 
-  public deletePlan(data:any){
+  public deleteRecipeNutri(data:any){
+
+    return this.http.put(this.rootUrl + 'delete_recipe_from_nutri', data);
+  }
+
+
+  /**public deletePDNutri(data:any){
     let address = this.rootUrl + 'CAMBIAR';
     let Options = {
       headers: new HttpHeaders({
@@ -307,19 +331,7 @@ export class AllFunctionsService {
     };
     return this.http.delete(address,Options);
 
-  }
-
-  public deletePDNutri(data:any){
-    let address = this.rootUrl + 'CAMBIAR';
-    let Options = {
-      headers: new HttpHeaders({
-        'Content-type': 'application/json',
-      }),
-      body: data,
-    };
-    return this.http.delete(address,Options);
-
-  }
+  }**/
 
 
 

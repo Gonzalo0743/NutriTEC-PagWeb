@@ -26,7 +26,6 @@ import { DailyConsumptionRegisterComponent } from './Pages/Client/RegisterData/d
 import { MealManagementLandPageComponent } from './Pages/Client/MealManagement/meal-management-land-page/meal-management-land-page.component';
 import { AddProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/add-prod-dish/add-prod-dish.component';
 import { EditProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/edit-prod-dish/edit-prod-dish.component';
-import { DeleteProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/delete-prod-dish/delete-prod-dish.component';
 import { ConsultProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/consult-prod-dish/consult-prod-dish.component';
 import { AddRecipeComponent } from './Pages/Client/MealManagement/Recipes/add-recipe/add-recipe.component';
 import { EditRecipeComponent } from './Pages/Client/MealManagement/Recipes/edit-recipe/edit-recipe.component';
@@ -74,6 +73,9 @@ import { GetEatPlanByNutritionistComponent } from './Pages/Nutri/MealManagementN
 import { PatientManagementLandPageComponent } from './Pages/Nutri/PatientManagement/patient-management-land-page/patient-management-land-page.component';
 import { AssignProductToRecipeComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/assign-product-to-recipe/assign-product-to-recipe.component';
 import { GetProductsByRecipeComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/get-products-by-recipe/get-products-by-recipe.component';
+import { ConsultFeedbackComponent } from './Pages/Client/consult-feedback/consult-feedback.component';
+import { AddFeedbackComponent } from './Pages/Nutri/add-feedback/add-feedback.component';
+
 
 
 @NgModule({
@@ -98,7 +100,6 @@ import { GetProductsByRecipeComponent } from './Pages/Nutri/MealManagementNutri/
     MealManagementLandPageComponent,
     AddProdDishComponent,
     EditProdDishComponent,
-    DeleteProdDishComponent,
     ConsultProdDishComponent,
     AddRecipeComponent,
     EditRecipeComponent,
@@ -146,6 +147,8 @@ import { GetProductsByRecipeComponent } from './Pages/Nutri/MealManagementNutri/
     PatientManagementLandPageComponent,
     AssignProductToRecipeComponent,
     GetProductsByRecipeComponent,
+    ConsultFeedbackComponent,
+    AddFeedbackComponent,
 
   ],
   imports: [

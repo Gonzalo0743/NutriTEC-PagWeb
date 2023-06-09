@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DeleteProdDishComponent } from './delete-prod-dish.component';
+import { AddFeedbackComponent } from './add-feedback.component';
 
-describe('DeleteProdDishComponent', () => {
-  let component: DeleteProdDishComponent;
-  let fixture: ComponentFixture<DeleteProdDishComponent>;
+describe('AddFeedbackComponent', () => {
+  let component: AddFeedbackComponent;
+  let fixture: ComponentFixture<AddFeedbackComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DeleteProdDishComponent ]
+      declarations: [ AddFeedbackComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DeleteProdDishComponent);
+    fixture = TestBed.createComponent(AddFeedbackComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

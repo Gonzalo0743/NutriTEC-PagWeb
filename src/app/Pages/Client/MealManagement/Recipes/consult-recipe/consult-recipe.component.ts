@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { AllFunctionsService } from 'src/app/Functions/all-functions.service';
 import { Router } from '@angular/router';
 import { GetRecipe } from 'src/app/Models/GetRecipe.interface';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-consult-recipe',
@@ -46,9 +47,12 @@ export class ConsultRecipeComponent {
             this.response = Array.of(this.RecipeData);
 
           }
-          else{
-            this.ShowRecipeForm.setErrors({ unauthenticated: true});
-          }
+
+        },
+        (error: HttpErrorResponse) => {
+          console.log(error.error); // Muestra el error en la consola
+          this.ShowRecipeForm.setErrors({unauthenticated: true});
+          
         })
       }
     }

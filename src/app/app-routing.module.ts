@@ -22,7 +22,6 @@ import { PDNutriLandPageComponent } from './Pages/Nutri/MealManagementNutri/Prod
 import { PlansLandPageComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/plans-land-page/plans-land-page.component';
 import { AddProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/add-prod-dish/add-prod-dish.component';
 import { ConsultProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/consult-prod-dish/consult-prod-dish.component';
-import { DeleteProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/delete-prod-dish/delete-prod-dish.component';
 import { EditProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/edit-prod-dish/edit-prod-dish.component';
 import { AddRecipeComponent } from './Pages/Client/MealManagement/Recipes/add-recipe/add-recipe.component';
 import { ConsultRecipeComponent } from './Pages/Client/MealManagement/Recipes/consult-recipe/consult-recipe.component';
@@ -64,6 +63,8 @@ import { UpdateClientMeasurementsComponent } from './Pages/Nutri/PatientManageme
 import { GetClientEatingPlanComponent } from './Pages/Nutri/PatientManagement/get-client-eating-plan/get-client-eating-plan.component';
 import { AssignProductToRecipeComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/assign-product-to-recipe/assign-product-to-recipe.component';
 import { GetProductsByRecipeComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/get-products-by-recipe/get-products-by-recipe.component';
+import { AddFeedbackComponent } from './Pages/Nutri/add-feedback/add-feedback.component';
+import { ConsultFeedbackComponent } from './Pages/Client/consult-feedback/consult-feedback.component';
 
 
 
@@ -155,10 +156,6 @@ const routes: Routes = [
   {
     path:'ConsultProdDish',
     component:ConsultProdDishComponent
-  },
-  {
-    path:'DeleteProdDish',
-    component:DeleteProdDishComponent
   },
   {
     path:'EditProdDish',
@@ -319,6 +316,14 @@ const routes: Routes = [
   {
     path:'UpdateClientMeasures',
     component:UpdateClientMeasurementsComponent
+  },
+  {
+    path:'AddFeedback',
+    component:AddFeedbackComponent
+  },
+  {
+    path:'ConsultFeedback',
+    component:ConsultFeedbackComponent
   }
 
 ];

@@ -1,0 +1,32 @@
+<app-header-admin></app-header-admin>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Consult Feedback</h1>
+  </div>
+  <!-- Title -->
+
+  <table class="table table-light">
+    <thead>
+      <tr>
+        <th scope="col">Client ID</th>
+        <th scope="col">Nutritionist Message</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let data of ConsultFeedbackForm">
+        <th scope="row">{{data.client_id }}</th>
+        <td>{{data.nutritionist_message }}</td>
+
+      </tr>
+    </tbody>
+  </table>
+
+     <!-- Back button -->
+     <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/ProductApprovalLandPage">Back</button>
+    </div>

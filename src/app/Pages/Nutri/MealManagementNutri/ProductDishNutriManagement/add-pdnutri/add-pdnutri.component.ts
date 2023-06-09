@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AllFunctionsService } from 'src/app/Functions/all-functions.service';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-add-pdnutri',
@@ -44,10 +45,12 @@ export class AddPDNutriComponent {
           this.jsonResponse = item;
           console.log(this.jsonResponse);
           this.router.navigate(['/ProdDishNutriLandPage']);
+        },
+        (error: HttpErrorResponse) => {
+          console.log(error.error); // Muestra el error en la consola
+          this.AddProductDishForm.setErrors({unauthenticated: true});
+          
         })
-      }
-      else{
-        console.log("Error");
       }
     }
 
