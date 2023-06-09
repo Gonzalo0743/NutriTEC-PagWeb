@@ -39,20 +39,12 @@ import { AddPDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDi
 import { EditPDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/edit-pdnutri/edit-pdnutri.component';
 import { ConsultPDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/consult-pdnutri/consult-pdnutri.component';
 import { DeletePDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/delete-pdnutri/delete-pdnutri.component';
-import { AddPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/add-plan/add-plan.component';
-import { EditPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/edit-plan/edit-plan.component';
-import { ConsultPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/consult-plan/consult-plan.component';
-import { DeletePlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/delete-plan/delete-plan.component';
-import { SearchAsocPacComponent } from './Pages/Nutri/search-asoc-pac/search-asoc-pac.component';
-import { PlanAssignmentComponent } from './Pages/Nutri/plan-assignment/plan-assignment.component';
-import { PatientTrackingComponent } from './Pages/Nutri/patient-tracking/patient-tracking.component';
 import { ProdDishLandPageComponent } from './Pages/Client/MealManagement/ProductsDishes/prod-dish-land-page/prod-dish-land-page.component';
 import { RecipesLandPageComponent } from './Pages/Client/MealManagement/Recipes/recipes-land-page/recipes-land-page.component';
 import { PlansLandPageComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/plans-land-page/plans-land-page.component';
 import { ShowAllProdDishComponent } from './Pages/Client/MealManagement/ProductsDishes/show-all-prod-dish/show-all-prod-dish.component';
 import { ShowAllRecipeComponent } from './Pages/Client/MealManagement/Recipes/show-all-recipe/show-all-recipe.component';
 import { ShowAllPdNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/show-all-pd-nutri/show-all-pd-nutri.component';
-import { ShowAllPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/show-all-plan/show-all-plan.component';
 import { ClientInfoComponent } from './Pages/Client/client-info/client-info.component';
 import { AdminInfoComponent } from './Pages/Admin/admin-info/admin-info.component';
 import { NutriInfoComponent } from './Pages/Nutri/nutri-info/nutri-info.component';
@@ -65,6 +57,22 @@ import { ProductApprovalLandPageComponent } from './Pages/Admin/ProductApproval/
 import { ShowDissapprovedPDNutriComponent } from './Pages/Nutri/MealManagementNutri/ProductDishNutriManagement/show-dissapproved-pdnutri/show-dissapproved-pdnutri.component';
 import { EatingPlanComponent } from './Pages/Client/eating-plan/eating-plan.component';
 import { GetNutritionistComponent } from './Pages/Client/get-nutritionist/get-nutritionist.component';
+import { RecipeNutriLandPageComponent } from './Pages/Nutri/MealManagementNutri/RecipesNutriManagement/recipe-nutri-land-page/recipe-nutri-land-page.component';
+import { AddRecipeNutriComponent } from './Pages/Nutri/MealManagementNutri/RecipesNutriManagement/add-recipe-nutri/add-recipe-nutri.component';
+import { EditRecipeNutriComponent } from './Pages/Nutri/MealManagementNutri/RecipesNutriManagement/edit-recipe-nutri/edit-recipe-nutri.component';
+import { GetRecipeNutriComponent } from './Pages/Nutri/MealManagementNutri/RecipesNutriManagement/get-recipe-nutri/get-recipe-nutri.component';
+import { DeleteRecipeNutriComponent } from './Pages/Nutri/MealManagementNutri/RecipesNutriManagement/delete-recipe-nutri/delete-recipe-nutri.component';
+import { AssignDailyConsumptionComponent } from './Pages/Nutri/PatientManagement/assign-daily-consumption/assign-daily-consumption.component';
+import { GetClientEatingPlanComponent } from './Pages/Nutri/PatientManagement/get-client-eating-plan/get-client-eating-plan.component';
+import { SearchClientComponent } from './Pages/Nutri/PatientManagement/search-client/search-client.component';
+import { UpdateClientMeasurementsComponent } from './Pages/Nutri/PatientManagement/update-client-measurements/update-client-measurements.component';
+import { GetClientByNutriComponent } from './Pages/Nutri/PatientManagement/get-client-by-nutri/get-client-by-nutri.component';
+import { AddEatingPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/add-eating-plan/add-eating-plan.component';
+import { AssignEatingPlanToClientComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/assign-eating-plan-to-client/assign-eating-plan-to-client.component';
+import { GetEatingPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/get-eating-plan/get-eating-plan.component';
+import { GetNutritionistPlanComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/get-nutritionist-plan/get-nutritionist-plan.component';
+import { GetEatPlanByNutritionistComponent } from './Pages/Nutri/MealManagementNutri/PlansManagement/get-eat-plan-by-nutritionist/get-eat-plan-by-nutritionist.component';
+import { PatientManagementLandPageComponent } from './Pages/Nutri/PatientManagement/patient-management-land-page/patient-management-land-page.component';
 
 @NgModule({
   declarations: [
@@ -101,20 +109,12 @@ import { GetNutritionistComponent } from './Pages/Client/get-nutritionist/get-nu
     EditPDNutriComponent,
     ConsultPDNutriComponent,
     DeletePDNutriComponent,
-    AddPlanComponent,
-    EditPlanComponent,
-    ConsultPlanComponent,
-    DeletePlanComponent,
-    SearchAsocPacComponent,
-    PlanAssignmentComponent,
-    PatientTrackingComponent,
     ProdDishLandPageComponent,
     RecipesLandPageComponent,
     PlansLandPageComponent,
     ShowAllProdDishComponent,
     ShowAllRecipeComponent,
     ShowAllPdNutriComponent,
-    ShowAllPlanComponent,
     ClientInfoComponent,
     AdminInfoComponent,
     NutriInfoComponent,
@@ -126,7 +126,23 @@ import { GetNutritionistComponent } from './Pages/Client/get-nutritionist/get-nu
     ProductApprovalLandPageComponent,
     ShowDissapprovedPDNutriComponent,
     EatingPlanComponent,
-    GetNutritionistComponent
+    GetNutritionistComponent,
+    RecipeNutriLandPageComponent,
+    AddRecipeNutriComponent,
+    EditRecipeNutriComponent,
+    GetRecipeNutriComponent,
+    DeleteRecipeNutriComponent,
+    AssignDailyConsumptionComponent,
+    GetClientEatingPlanComponent,
+    SearchClientComponent,
+    UpdateClientMeasurementsComponent,
+    GetClientByNutriComponent,
+    AddEatingPlanComponent,
+    AssignEatingPlanToClientComponent,
+    GetEatingPlanComponent,
+    GetNutritionistPlanComponent,
+    GetEatPlanByNutritionistComponent,
+    PatientManagementLandPageComponent
   ],
   imports: [
     BrowserModule,

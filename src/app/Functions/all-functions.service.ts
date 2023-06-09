@@ -116,7 +116,7 @@ export class AllFunctionsService {
     return this.http.post(this.rootUrl + 'add_client',data)
   }
 
-  public addPlanAssignment(data:any){
+  public addAssignDailyConsumption(data:any){
     return this.http.post(this.rootUrl + 'assign_daily_consump', data)
   }
 
