@@ -34,8 +34,8 @@ export class AllFunctionsService {
 
 
   /**
-   * @description This method is used to get all the branches of the system
-   * @returns A list with all the branches
+   * @description This method is used to get all the data of the system
+   * @returns A list with all the data
    */
 
   public getAllProdDish(){
@@ -93,11 +93,6 @@ export class AllFunctionsService {
 
   public addRecipeNutri(data:any){
     return this.http.post(this.rootUrl + 'nutri_insert_recipe',data);
-  }
-
-  public addMeasures(data:any){
-    return this.http.post(this.rootUrl + 'CAMBIAR',data);
-
   }
 
   public addDailyConsumption(data:any){
@@ -169,11 +164,6 @@ export class AllFunctionsService {
   public getRecipeNutri(data:any){
 
     return this.http.post(this.rootUrl + 'nutri_search_recipe',data);
-  }
-
-  public getPlan(data:any){
-
-    return this.http.post(this.rootUrl + 'CAMBIAR',data);
   }
 
   public getPDNutri(data:any){
@@ -258,9 +248,9 @@ export class AllFunctionsService {
     //*Put* for edit info
 
     /**
-   * @description This method is used to edit a branch of the system
+   * @description This method is used to edit a data of the system
    * @param data 
-   * @returns The function to the api to edit the specific branch
+   * @returns The function to the api to edit the specific data
    */
     public putEditProdDishClient(data:any){
 
@@ -277,10 +267,6 @@ export class AllFunctionsService {
       return this.http.put(this.rootUrl + 'nutri_update_recipe', data);
     }
 
-    public putEditPlan(data:any){
-
-      return this.http.put(this.rootUrl + 'CAMBIAR', data);
-    }
 
     public putEditPDNutri(data:any){
 
@@ -305,9 +291,9 @@ export class AllFunctionsService {
     //*Delete* for delete info
 
       /**
-   * @description This method is used to delete a branch of the system
+   * @description This method is used to delete a specific data of the system
    * @param data 
-   * @returns The function to the api to delete the specific branch
+   * @returns The function to the api to delete the specific data
    */
 
   public deleteRecipe(data:any){
@@ -320,18 +306,6 @@ export class AllFunctionsService {
     return this.http.put(this.rootUrl + 'delete_recipe_from_nutri', data);
   }
 
-
-  /**public deletePDNutri(data:any){
-    let address = this.rootUrl + 'CAMBIAR';
-    let Options = {
-      headers: new HttpHeaders({
-        'Content-type': 'application/json',
-      }),
-      body: data,
-    };
-    return this.http.delete(address,Options);
-
-  }**/
 
 
 
