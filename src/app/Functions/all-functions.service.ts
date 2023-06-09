@@ -206,12 +206,23 @@ export class AllFunctionsService {
     }
 
     public getClientForNutri(data:any){
-
       return this.http.post(this.rootUrl + 'get_client_by_nutritionist',data);
+    }
+
+    public getEatPlanByNutri(data:any){
+      return this.http.post(this.rootUrl + 'get_eatplan_by_nutritionist',data);
+    }
+
+    public getNutritionistPlan(data:any){
+      return this.http.post(this.rootUrl + 'get_nutritionist_plan',data);
     }
 
     public getClientEatingPlanForNutri(data:any){
       return this.http.post(this.rootUrl + 'get_client_eating_plan',data);
+    }
+
+    public getEatingPlanForNutri(data:any){
+      return this.http.post(this.rootUrl + 'get_eating_plan',data);
     }
 
     public getSearchClient(data:any){

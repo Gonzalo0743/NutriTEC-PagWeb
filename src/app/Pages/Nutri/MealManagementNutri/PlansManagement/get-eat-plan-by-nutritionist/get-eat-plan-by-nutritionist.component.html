@@ -1,1 +1,46 @@
-<p>get-eat-plan-by-nutritionist works!</p>
+<app-header-nutritionist></app-header-nutritionist>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Eat Plan By Nutritionist</h1>
+    <h4 class="mb-3">Here you can see the eat plans that you did</h4>
+  </div>
+  <!-- Title -->
+
+  <form [formGroup]="getEatPlanForm">
+    <table class="table table-light">
+        <thead>
+          <tr>
+            <th scope="col">Eat Plan ID</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Eating Schedule</th>
+            <th scope="col">Start Period</th>
+            <th scope="col">Ending Period</th>
+
+          </tr>
+        </thead>
+        <tbody>
+    
+          <tr *ngFor="let data of response">
+            <th scope="row">{{data.eatplan_id}}</th>
+            <td>{{data.quantity}}</td>
+            <td>{{data.eating_schedule}}</td>
+            <td>{{data.start_period}}</td>
+            <td>{{data.ending_period}}</td>
+
+        </tbody>
+      </table>
+      <div class="text-center pt-1 mb-5 pb-1">
+        <div *ngIf="getEatPlanForm.errors?.['unauthenticated']">You are not associate with an eating plan</div>
+      </div>
+
+
+    
+
+     <!-- Back button -->
+     <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/PlansLandPage">Back</button>
+    </div>
+  </form>

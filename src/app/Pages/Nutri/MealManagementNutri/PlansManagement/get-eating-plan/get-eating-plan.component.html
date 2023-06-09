@@ -1,1 +1,58 @@
-<p>get-eating-plan works!</p>
+<app-header-nutritionist></app-header-nutritionist>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Get Eating Plan</h1>
+    <h4 class="mb-3">Enter the "Client ID" of the client that you want to show his eating plan</h4>
+  </div>
+  <!-- Title -->
+
+  <form [formGroup]="GetEatingPlanForm" (ngSubmit)="proceedGetEatingPlan()">
+    <div class="form-outline">
+        <input type="text" formControlName="eatplan_id" id="form3Example1" class="form-control"/>
+        <label class="form-label" for="form3Example1">Eat Plan ID</label>
+    </div>
+
+    <table class="table table-light">
+        <thead>
+          <tr>
+            <th scope="col">Eat Plan ID</th>
+            <th scope="col">Nutritionist Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Eating Schedule</th>
+            <th scope="col">Start Period</th>
+            <th scope="col">Ending Period</th>
+
+          </tr>
+        </thead>
+        <tbody>
+    
+          <tr *ngFor="let data of response">
+            <th scope="row">{{data.eatplan_id}}</th>
+            <td>{{data.nutritionist_name}}</td>
+            <td>{{data.quantity}}</td>
+            <td>{{data.eating_schedule}}</td>
+            <td>{{data.start_period}}</td>
+            <td>{{data.ending_period}}</td>
+
+        </tbody>
+      </table>
+
+      <div class="text-center pt-1 mb-5 pb-1">
+        <div *ngIf="GetEatingPlanForm.errors?.['unauthenticated']">This eating plan doesn´t exist.</div>
+      </div>
+
+    <!-- Submit button -->
+    <div class="d-flex align-items-center justify-content-center pb-4">
+        <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">Show</button>
+    </div>
+
+    
+
+     <!-- Back button -->
+     <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/PlansLandPage">Back</button>
+    </div>
+  </form>

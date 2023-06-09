@@ -39,7 +39,9 @@ export class GetClientByNutriComponent {
     this.NutriInfo = this.service.DataNutri;
     this.json = Array.of(this.NutriInfo);
     console.log(this.json);
-    this.nutritionist_id = this.json[0].nutritionist_id;
+
+    //REVISAR EL ID QUE AGARRA
+    this.nutritionist_id = this.json[0].employee_id;
     console.log(this.nutritionist_id);
 
     const SendInfoNutri: NutriID={

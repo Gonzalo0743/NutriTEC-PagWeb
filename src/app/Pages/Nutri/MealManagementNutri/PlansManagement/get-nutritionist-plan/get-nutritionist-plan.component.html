@@ -1,1 +1,41 @@
-<p>get-nutritionist-plan works!</p>
+<app-header-nutritionist></app-header-nutritionist>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Get Nutritionist Plan</h1>
+    <h4 class="mb-3">Here you can see the eat plans are linked to you</h4>
+  </div>
+  <!-- Title -->
+
+  <form [formGroup]="getNutritionistPlanForm">
+    <table class="table table-light">
+        <thead>
+          <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">Eat Plan ID</th>
+
+          </tr>
+        </thead>
+        <tbody>
+    
+          <tr *ngFor="let data of response">
+            <th scope="row">{{data.nutritionist_id}}</th>
+            <td>{{data.eatplan_id}}</td>
+
+
+        </tbody>
+      </table>
+      <div class="text-center pt-1 mb-5 pb-1">
+        <div *ngIf="getNutritionistPlanForm.errors?.['unauthenticated']">You are not associate with an eating plan</div>
+      </div>
+
+
+    
+
+     <!-- Back button -->
+     <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/PlansLandPage">Back</button>
+    </div>
+  </form>
