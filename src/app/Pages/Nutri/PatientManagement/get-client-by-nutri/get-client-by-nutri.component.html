@@ -1,1 +1,41 @@
-<p>get-client-by-nutri works!</p>
+<app-header-nutritionist></app-header-nutritionist>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Clients By Nutritionist</h1>
+    <h4 class="mb-3">Here you can see your clients info</h4>
+  </div>
+  <!-- Title -->
+
+  <form [formGroup]="getClientsForm">
+    <table class="table table-light">
+        <thead>
+          <tr>
+            <th scope="col">Client ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Last Name</th>
+
+          </tr>
+        </thead>
+        <tbody>
+    
+          <tr *ngFor="let data of response">
+            <th scope="row">{{data.client_id}}</th>
+            <td>{{data.c_name}}</td>
+            <td>{{data.c_lname}}</td>
+
+        </tbody>
+      </table>
+      <div class="text-center pt-1 mb-5 pb-1">
+        <div *ngIf="getClientsForm.errors?.['unauthenticated']">You are not associate with any clients</div>
+      </div>
+
+    
+
+     <!-- Back button -->
+     <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/PatientManagementLandPage">Back</button>
+    </div>
+  </form>

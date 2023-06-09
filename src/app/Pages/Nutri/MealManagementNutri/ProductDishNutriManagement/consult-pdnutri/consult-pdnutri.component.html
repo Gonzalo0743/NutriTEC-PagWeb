@@ -51,6 +51,11 @@
         </tbody>
       </table>
 
+      <div class="text-center pt-1 mb-5 pb-1">
+        <div *ngIf="ShowProductDishForm.errors?.['unauthenticated']">This product doesn´t exist</div>
+      </div>
+
+
     <!-- Submit button -->
     <div class="d-flex align-items-center justify-content-center pb-4">
         <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">Show</button>

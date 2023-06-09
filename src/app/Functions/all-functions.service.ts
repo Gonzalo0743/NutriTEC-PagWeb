@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Temperature } from '../../app/Models/Prueba.interface';
 import { Observable } from 'rxjs';
 
 import { ClientData } from '../Models/ClientInfo.interface';
@@ -35,9 +34,10 @@ export class AllFunctionsService {
    * @description This method is used to get all the branches of the system
    * @returns A list with all the branches
    */
-  public getAllProdDish():Observable<Temperature[]>{
 
-    return this.http.get<Temperature[]>(this.rootUrl + 'WeatherForecast')
+  public getAllProdDish(){
+
+    return this.http.get(this.rootUrl + 'WeatherForecast')
   }
 
   public getAllProdDishState():Observable<AllProductsDishesData[]>{
@@ -93,12 +93,20 @@ export class AllFunctionsService {
     return this.http.post(this.rootUrl + 'assign_product_to_recipe',data);
   }
 
+  public addAssignEatinPlanToClient(data:any){
+    return this.http.post(this.rootUrl + 'assign_eating_plan_to_client',data);
+  }
+
   public addPlan(data:any){
     return this.http.post(this.rootUrl + 'create_eating_plan',data);
   }
 
   public addPDNutri(data:any){
     return this.http.post(this.rootUrl + 'insert_product_dish',data);
+  }
+
+  public addEatingPlanNutri(data:any){
+    return this.http.post(this.rootUrl + 'create_eating_plan',data);
   }
 
   public addAdmin(data:any){
@@ -197,6 +205,21 @@ export class AllFunctionsService {
       return this.http.post(this.rootUrl + 'client_get_eating_plan',data);
     }
 
+    public getClientForNutri(data:any){
+
+      return this.http.post(this.rootUrl + 'get_client_by_nutritionist',data);
+    }
+
+    public getClientEatingPlanForNutri(data:any){
+      return this.http.post(this.rootUrl + 'get_client_eating_plan',data);
+    }
+
+    public getSearchClient(data:any){
+      return this.http.post(this.rootUrl + 'nutri_search_client',data);
+    }
+
+
+
     //*Put* for edit info
 
     /**
@@ -232,6 +255,11 @@ export class AllFunctionsService {
     public putUpdateMeasures(data:any){
 
       return this.http.put(this.rootUrl + 'update_measures', data);
+    }
+
+    public putUpdateClientMeasuresFromNutri(data:any){
+
+      return this.http.put(this.rootUrl + 'update_client_measurements', data);
     }
 
     //*Delete* for delete info

@@ -1,1 +1,86 @@
-<p>update-client-measurements works!</p>
+<app-header-client></app-header-client>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Update Client Measures</h1>
+    <h4 class="mb-3">Enter the new measures for the client that you want to update</h4>
+  </div>
+  <!-- Title -->
+
+  <form [formGroup]="UpdateClientMeasuresForm" (ngSubmit)="proceedUpdateClientMeasures()">
+    <!--Client ID and Muscle Percentage -->
+    <div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="form-outline">
+        <input type="text" formControlName="client_id" id="form3Example1" class="form-control"/>
+        <label class="form-label" for="form3Example1">Client ID</label>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="form-outline">
+        <input type="text" formControlName="muslce_percentage" id="form3Example2" class="form-control" />
+        <label class="form-label" for="form3Example2">Muscle Percentage</label>
+        </div>
+    </div>
+    </div>
+
+    <!--Fat Percentage and Hip Size-->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+            <input type="text" formControlName="fat_percentage" id="form3Example1" class="form-control"/>
+            <label class="form-label" for="form3Example1">Fat Percentage</label>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+            <input type="text" formControlName="hip_size" id="form3Example2" class="form-control" />
+            <label class="form-label" for="form3Example2">Hip Size</label>
+            </div>
+        </div>
+        </div>
+
+    <!--Waist Size and Neck Size-->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+                <input type="text" formControlName="waist_size" id="form3Example1" class="form-control"/>
+                <label class="form-label" for="form3Example1">Waist Size</label>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+                <input type="text" formControlName="neck_size" id="form3Example2" class="form-control" />
+                <label class="form-label" for="form3Example2">Neck Size</label>
+            </div>
+        </div>
+        </div>
+
+        <!--Last Month Meas-->
+        <div class="form-outline">
+            <input type="text" formControlName="last_month_meas" id="form3Example2" class="form-control" />
+            <label class="form-label" for="form3Example2">Last Month Measurement</label>
+        </div>
+    
+
+
+    
+    <!-- Submit button -->
+    <div class="d-flex align-items-center justify-content-center pb-4">
+        <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">Register</button>
+    </div>
+
+    <!-- Back button -->
+    <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/PatientManagementLandPage">Back</button>
+    </div>
+
+
+
+    
+</form>
+
+
+    

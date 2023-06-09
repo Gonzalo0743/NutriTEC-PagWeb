@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { AllFunctionsService } from 'src/app/Functions/all-functions.service';
 import { Router } from '@angular/router';
 import { AllProductsDishesData } from 'src/app/Models/AllProductsDishes.interface';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-consult-pdnutri',
@@ -47,6 +48,11 @@ export class ConsultPDNutriComponent {
         else{
           this.ShowProductDishForm.setErrors({ unauthenticated: true});
         }
+      },
+      (error: HttpErrorResponse) => {
+        console.log(error.error); // Muestra el error en la consola
+        this.ShowProductDishForm.setErrors({unauthenticated: true});
+        
       })
     }
   }

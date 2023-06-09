@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { AllFunctionsService } from 'src/app/Functions/all-functions.service';
 import { Router } from '@angular/router';
 import { GetProductsByRecipeModel } from 'src/app/Models/GetProductByRecipe.interface';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-get-products-by-recipe',
@@ -44,9 +45,11 @@ export class GetProductsByRecipeComponent {
           this.response = Array.of(this.ProductData);
 
         }
-        else{
-          this.GetProductByRecipeForm.setErrors({ unauthenticated: true});
-        }
+      },
+      (error: HttpErrorResponse) => {
+        console.log(error.error); // Muestra el error en la consola
+        this.GetProductByRecipeForm.setErrors({unauthenticated: true});
+        
       })
     }
   }

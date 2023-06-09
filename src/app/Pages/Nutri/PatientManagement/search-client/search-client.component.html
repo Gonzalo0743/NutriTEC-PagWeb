@@ -1,1 +1,70 @@
-<p>search-client works!</p>
+<app-header-nutritionist></app-header-nutritionist>
+
+<!-- Title -->
+<div class="p-5 text-center">
+    <img src="./assets/img/Logo.png"
+        style="width: 185px;" alt="logo">
+    <h1 class="mb-3">Search Client</h1>
+    <h4 class="mb-3">Enter the "Client ID" of the client that you want to search</h4>
+  </div>
+  <!-- Title -->
+
+  <form [formGroup]="SearchClientForm" (ngSubmit)="proceedSearchClient()">
+    <div class="form-outline">
+        <input type="text" formControlName="client_id" id="form3Example1" class="form-control"/>
+        <label class="form-label" for="form3Example1">Client ID</label>
+    </div>
+
+    <table class="table table-light">
+        <thead>
+          <tr>
+            <th scope="col">Client ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Last Name (1)</th>
+            <th scope="col">Last Name (2)</th>
+            <th scope="col">Email</th>
+            <th scope="col">BMI</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Fat Percentage</th>
+            <th scope="col">Hip Size</th>
+            <th scope="col">Muscle Percentage</th>
+            <th scope="col">Neck Size</th>
+            <th scope="col">Waist Size</th>
+          </tr>
+        </thead>
+        <tbody>
+    
+          <tr *ngFor="let data of response" >
+            <th scope="row">{{data.client_id}}</th>
+            <td>{{data.name}}</td>
+            <td>{{data.lname1}}</td>
+            <td>{{data.lname2}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.bmi}}</td>
+            <td>{{data.weight}}</td>
+            <td>{{data.fat_percentage}}</td>
+            <td>{{data.hip_size}}</td>
+            <td>{{data.muscle_percentage}}</td>
+            <td>{{data.neck_size}}</td>
+            <td>{{data.waist_size}}</td>
+            
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="text-center pt-1 mb-5 pb-1">
+        <div *ngIf="SearchClientForm.errors?.['unauthenticated']">This client doesn´t exist.</div>
+      </div>
+
+    <!-- Submit button -->
+    <div class="d-flex align-items-center justify-content-center pb-4">
+        <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3">Show</button>
+    </div>
+
+    
+
+     <!-- Back button -->
+     <div class="d-flex align-items-center justify-content-center pb-4">
+        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" routerLink="/PatientManagementLandPage">Back</button>
+    </div>
+  </form>
