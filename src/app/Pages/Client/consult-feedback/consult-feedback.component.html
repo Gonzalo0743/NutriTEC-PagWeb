@@ -18,9 +18,9 @@
     </thead>
     <tbody>
 
-      <tr *ngFor="let data of ConsultFeedbackForm">
-        <th scope="row">{{data.client_id }}</th>
-        <td>{{data.nutritionist_message }}</td>
+      <tr *ngFor="let data of jsonResponse">
+        <th scope="row">{{data.client_id}}</th>
+        <td>{{data.nutritionist_message}}</td>
 
       </tr>
     </tbody>

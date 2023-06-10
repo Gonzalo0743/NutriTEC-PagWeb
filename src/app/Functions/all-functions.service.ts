@@ -63,11 +63,6 @@ export class AllFunctionsService {
     return this.http.get<AllProductsDishesData[]>(this.rootUrl + 'client_get_aproved_product_dish')
   }
 
-  public getFeedback():Observable<ConsultFeedback[]>{
-
-    return this.http.get<ConsultFeedback[]>(this.URLMongo + 'all_feedback')
-  }
-
   public getPaymentReport(data:any){
     return this.http.get(this.rootUrl + 'get_payment_report/{payment_type}/{email}/{name}/{second_name}/{lname1}/{lname2}/{credit_card}/{discount}/{total_amount}/{final_amount}'+data,{observe:'response',responseType:'blob'})
   }
@@ -241,6 +236,10 @@ export class AllFunctionsService {
 
     public getSearchClient(data:any){
       return this.http.post(this.rootUrl + 'nutri_search_client',data);
+    }
+
+    public getFeedback(data:any){
+      return this.http.post(this.URLMongo + 'feedback_details',data);
     }
 
 
